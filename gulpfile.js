@@ -13,7 +13,6 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
-const run = require("run-sequence");
 const del = require("del");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
@@ -30,22 +29,26 @@ const config = {
 
 gulp.task("browserSync", function () {
   browserSync.init({
-    server: config.build
+    server: config.build,
+    notify: false,
+    open: true,
+    cors: true,
+    ui: false
   });
 
-  gulp.watch(`${config.src}/scss/**/*.{scss,sass}`, ["style"]);
-  gulp.watch(`${config.src}/js/**/*.js`, ["js"]);
-  gulp.watch(`${config.src}/*.html`, ["html"]);
-  gulp.watch(`${config.build}/**/*.*`).on('change', browserSync.reload);
+  gulp.watch(`${config.src}/sass/**/*.{scss,sass}`, gulp.series("style"));
+  gulp.watch(`${config.src}/js/**/*.js`, gulp.series("js"));
+  gulp.watch(`${config.src}/*.html`, gulp.series("html"));
+  gulp.watch(`${config.build}/**/*.*`).on("change", browserSync.reload);
 });
 
 /* Сборка стилей и минификация */
 
 gulp.task("style", function () {
-  return gulp.src(`${config.src}/scss/style.scss`)
+  return gulp.src(`${config.src}/sass/style.scss`)
     .pipe(plumber())
     .pipe(sass({
-      outputStyle: 'expanded'
+      outputStyle: "expanded"
     }))
     .pipe(postcss([
       autoprefixer()
@@ -59,7 +62,7 @@ gulp.task("style", function () {
 /* Normalize.css */
 
 gulp.task("normalize", function () {
-  return gulp.src(`${config.src}/scss/normalize.scss`)
+  return gulp.src(`${config.src}/sass/normalize.scss`)
     .pipe(plumber())
     .pipe(sass())
     .pipe(minify())
@@ -73,9 +76,9 @@ gulp.task("js", function () {
   return gulp.src(`${config.src}/js/**/*.js`)
     .pipe(plumber())
     .pipe(babel({
-      presets: ['env']
+      presets: ["env"]
     }))
-    .pipe(concat('main.js'))
+    .pipe(concat("main.js"))
     .pipe(gulp.dest(`${config.build}/js`))
     .pipe(uglifyJs())
     .pipe(rename("main.min.js"))
@@ -147,7 +150,6 @@ gulp.task("copy", function () {
   return gulp.src([
     `${config.src}/fonts/**/*.{woff,woff2}`,
     `${config.src}/img/**`,
-    // `${config.src}/js/**`
   ], {
     base: config.src
   })
@@ -156,15 +158,13 @@ gulp.task("copy", function () {
 
 /* Сборка проекта */
 
-gulp.task("build", function (done) {
-  run(
-    "clean",
-    "copy",
-    "normalize",
-    "style",
-    "sprite",
-    "html",
-    "js",
-    done
-  );
-});
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "normalize",
+  "style",
+  "sprite",
+  "html",
+  "js",
+  )
+);
