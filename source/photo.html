@@ -1,17 +1,291 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="nojs" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Pink - Фотографии</title>
+  <!--<link rel="preload" href="fonts/opensans.woff2" as="font">-->
+  <!--<link rel="preload" href="fonts/opensansbold.woff2" as="font">-->
   <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
 
+  <div hidden>
+    <include src="build/img/sprite.svg"></include>
+  </div>
 
+  <!-- Шапка -->
+
+  <header class="page-header">
+
+    <nav class="main-navigation">
+      <div class="main-navigation__box">
+        <a class="logo">
+          <span class="visually-hidden">Pink</span>
+          <!-- TODO adaptive + svg-->
+          <picture class="logo__image">
+            <source media="(min-width: 960px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Логотип Pink">
+          </picture>
+        </a>
+        <button class="main-navigation__toggle" type="button" id="navigation-button">
+          <span class="main-navigation__toggle-icon">Меню</span>
+        </button>
+      </div>
+
+      <ul class="main-navigation__list main-navigation__list--show">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="index.html">Главная</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link">Фотографии</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="form.html">Конкурс</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+            Academy</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-header__wrapper">
+      <h1 class="page-header__title">Фотографии пользователей</h1>
+    </div>
+  </header>
+
+  <!-- Основная часть -->
+
+  <main class="page-main">
+    <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
+      ваших?</p>
+
+    <!-- Фотографии пользователей -->
+
+    <section class="photos">
+      <h2 class="visually-hidden">Фотографии пользователей</h2>
+
+      <article class="photo photo--panorama">
+        <picture class="photo__image">
+          <source media="(min-width: 960px)" srcset="img/">
+          <source media="(min-width: 660px)" srcset="img/">
+          <img src="img/" alt="Панорама дня от Анны">
+        </picture>
+
+        <div class="photo__box">
+          <p class="photo__author">Анна <span class="photo__time">(5 минут назад)</span></p>
+          <p class="photo__description">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в
+            перископе, задавайте свои вопросы!</p>
+          <p class="photo__likes">Нравится: <span class="photo__likes-counter">215</span></p>
+        </div>
+      </article>
+
+      <ul class="photos__list">
+        <li class="photos__item">
+          <article class="photo">
+            <picture class="photo__image">
+              <source media="(min-width: 960px)" srcset="img/">
+              <source media="(min-width: 660px)" srcset="img/">
+              <img src="img/" alt="Фото Левона">
+            </picture>
+
+            <div class="photo__box">
+              <p class="photo__author">Левон <span class="photo__time">(5 часов назад)</span></p>
+              <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="photo__likes">Нравится: <span class="photo__likes-counter">356</span></p>
+            </div>
+          </article>
+        </li>
+
+        <li class="photos__item">
+          <article class="photo">
+            <picture class="photo__image">
+              <source media="(min-width: 960px)" srcset="img/">
+              <source media="(min-width: 660px)" srcset="img/">
+              <img src="img/" alt="Фото Антона">
+            </picture>
+
+            <div class="photo__box">
+              <p class="photo__author">Антон <span class="photo__time">(12 часов назад)</span></p>
+              <p class="photo__description">Соседи будут рады!</p>
+              <p class="photo__likes">Нравится: <span class="photo__likes-counter">666</span></p>
+            </div>
+          </article>
+        </li>
+
+        <li class="photos__item">
+          <article class="photo">
+            <picture class="photo__image">
+              <source media="(min-width: 960px)" srcset="img/">
+              <source media="(min-width: 660px)" srcset="img/">
+              <img src="img/" alt="Фото Бориса">
+            </picture>
+
+            <div class="photo__box">
+              <p class="photo__author">Борис <span class="photo__time">(20 часов назад)</span></p>
+              <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="photo__likes">Нравится: <span class="photo__likes-counter">215</span></p>
+            </div>
+          </article>
+        </li>
+
+        <li class="photos__item">
+          <article class="photo">
+            <picture class="photo__image">
+              <source media="(min-width: 960px)" srcset="img/">
+              <source media="(min-width: 660px)" srcset="img/">
+              <img src="img/" alt="Фото Сергея">
+            </picture>
+
+            <div class="photo__box">
+              <p class="photo__author">Сергей <span class="photo__time">(25 часов назад)</span></p>
+              <p class="photo__description">Самая кубанская в мире!</p>
+              <p class="photo__likes">Нравится: <span class="photo__likes-counter">4</span></p>
+            </div>
+          </article>
+        </li>
+
+        <li class="photos__item">
+          <article class="photo">
+            <picture class="photo__image">
+              <source media="(min-width: 960px)" srcset="img/">
+              <source media="(min-width: 660px)" srcset="img/">
+              <img src="img/" alt="Фото Максима">
+            </picture>
+
+            <div class="photo__box">
+              <p class="photo__author">Максим <span class="photo__time">(40 часов назад)</span></p>
+              <p class="photo__description">Где снег-то?</p>
+              <p class="photo__likes">Нравится: <span class="photo__likes-counter">150</span></p>
+            </div>
+          </article>
+        </li>
+
+        <li class="photos__item">
+          <article class="photo">
+            <picture class="photo__image">
+              <source media="(min-width: 960px)" srcset="img/">
+              <source media="(min-width: 660px)" srcset="img/">
+              <img src="img/" alt="Фото Надежды">
+            </picture>
+
+            <div class="photo__box">
+              <p class="photo__author">Надежда <span class="photo__time">(45 часов назад)</span></p>
+              <p class="photo__description">Всем GM и взаимные лайки!</p>
+              <p class="photo__likes">Нравится: <span class="photo__likes-counter">2560</span></p>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Редактор фотографий -->
+
+    <section class="editor">
+      <h2 class="editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
+      <div class="editor__wrapper">
+        <img class="editor__image" src="img/" width="300" height="400" alt="Ваше фото">
+
+        <div class="editor__effects">
+
+          <div class="effect">
+            <span class="visually-hidden">Кадрирование</span>
+            <div class="effect__image">
+              <svg class="effect__icon" width="" height="">
+                <use href="#icon-crop"></use>
+              </svg>
+            </div>
+            <div class="effect__control"></div>
+          </div>
+
+          <div class="effect">
+            <span class="visually-hidden">Насыщенность</span>
+            <div class="effect__image">
+              <svg class="effect__icon" width="" height="">
+                <use href="#icon-saturation"></use>
+              </svg>
+            </div>
+            <div class="effect__control"></div>
+          </div>
+
+          <div class="effect">
+            <span class="visually-hidden">Контраст</span>
+            <div class="effect__image">
+              <svg class="effect__icon" width="" height="">
+                <use href="#icon-contrast"></use>
+              </svg>
+            </div>
+            <div class="effect__control"></div>
+          </div>
+        </div>
+
+        <div class="editor__box">
+          <a class="button editor__button" href="#">Запостить</a>
+          <a class="button editor__button" href="#">Отмена</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Подвал -->
+
+  <footer class="page-footer">
+    <a class="logo">
+      <span class="visually-hidden">Pink</span>
+      <svg class="logo__icon" width="" height="">
+        <use href="#icon-logo-footer"></use>
+      </svg>
+    </a>
+
+    <ul class="page-footer__list">
+      <li class="page-footer__item">
+        <a class="social" href="#" target="_blank" title="Наш Twitter">
+          <span class="visually-hidden">Наш Twitter</span>
+          <svg class="social__icon" width="" height="">
+            <use href="#icon-twitter"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="page-footer__item">
+        <a class="social" href="#" target="_blank" title="Наш Facebook">
+          <span class="visually-hidden">Наш Facebook</span>
+          <svg class="social__icon" width="" height="">
+            <use href="#icon-fb"></use>
+          </svg>
+        </a>
+      </li>
+
+      <li class="page-footer__item">
+        <a class="social" href="#" target="_blank" title="Наш YouTube">
+          <span class="visually-hidden">Наш YouTube</span>
+          <svg class="social__icon" width="" height="">
+            <use href="#icon-youtube"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="page-footer__copyright">
+      <p class="copyright">
+        <span class="copyright__text">Разработано</span>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" title="HTML Academy">
+          <span class="visually-hidden">HTML Academy</span>
+          <svg class="copyright__icon" width="27" height="34">
+            <use href="#icon-academy"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
 </body>
 </html>
