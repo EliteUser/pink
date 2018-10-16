@@ -75,9 +75,7 @@ gulp.task("normalize", function () {
 gulp.task("js", function () {
   return gulp.src(`${config.src}/js/**/*.js`)
     .pipe(plumber())
-    .pipe(babel({
-      presets: ["env"]
-    }))
+    .pipe(babel())
     .pipe(concat("main.js"))
     .pipe(gulp.dest(`${config.build}/js`))
     .pipe(uglifyJs())
