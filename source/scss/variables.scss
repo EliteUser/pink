@@ -3,16 +3,19 @@
 $screen-mobile: 320px;
 $screen-tablet: 320px;
 $screen-desktop: 320px;
+$retina-dppx: 1.5dppx;
+$retina-dpi: 144dpi;
 
 /* Colors */
 
-$text: #444444;
 $text-dark: #000000;
 $text-light: #ffffff;
+$border: #e5e5e5;
 
-$page-green: #63d1bb;
-$page-green-hover: #59d5bc;
-$page-darkgreen: #56c3b2;
-$page-darkgreen-hover: #46c1ae;
-$gray-bg: #f1f1f1;
-$border-light: #ececec;
+$page-pink: #d22856;
+$page-blue: #283645;
+$page-darkblue: #1d2631;
+$btn-green: #2aab6d;
+$btn-cancel: #b5b9be;
+
+$gray-bg: #f2f2f2;

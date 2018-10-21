@@ -17,6 +17,11 @@ const del = require("del");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const uglifyJs = require("gulp-uglify");
+const gulpIf = require("gulp-if");
+const sourcemaps = require("gulp-sourcemaps");
+const argv = require('yargs').argv;
+
+const isProduction = ( argv.production !== undefined );
 
 /* Директории: исходники и сборка */
 
@@ -38,7 +43,7 @@ gulp.task("browserSync", function () {
 
   gulp.watch(`${config.src}/sass/**/*.{scss,sass}`, gulp.series("style"));
   gulp.watch(`${config.src}/js/**/*.js`, gulp.series("js"));
-  gulp.watch(`${config.src}/*.html`, gulp.series("html"));
+  gulp.watch(`${config.src}/**/*.html`, gulp.series("html"));
   gulp.watch(`${config.build}/**/*.*`).on("change", browserSync.reload);
 });
 
@@ -47,6 +52,9 @@ gulp.task("browserSync", function () {
 gulp.task("style", function () {
   return gulp.src(`${config.src}/sass/style.scss`)
     .pipe(plumber())
+    .pipe(
+      gulpIf(!isProduction, sourcemaps.init())
+    )
     .pipe(sass({
       outputStyle: "expanded"
     }))
@@ -54,19 +62,13 @@ gulp.task("style", function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest(`${config.build}/css`))
-    .pipe(minify())
+    .pipe(minify({
+      restructure: false
+    }))
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest(`${config.build}/css`));
-});
-
-/* Normalize.css */
-
-gulp.task("normalize", function () {
-  return gulp.src(`${config.src}/sass/normalize.scss`)
-    .pipe(plumber())
-    .pipe(sass())
-    .pipe(minify())
-    .pipe(rename("normalize.min.css"))
+    .pipe(
+      gulpIf(!isProduction, sourcemaps.write("../css"))
+    )
     .pipe(gulp.dest(`${config.build}/css`));
 });
 
@@ -110,7 +112,7 @@ gulp.task("webp", function () {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(gulp.dest(`${config.src}/img`));
+    .pipe(gulp.dest(`${config.src}/img/webp`));
 });
 
 /* Сборка SVG спрайта */
@@ -159,7 +161,6 @@ gulp.task("copy", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "normalize",
   "style",
   "sprite",
   "html",

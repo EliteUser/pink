@@ -5,7 +5,7 @@
   "description": "Личный проект «Пинк» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
-    "autoprefixer": "^9.1.x",
+    "autoprefixer": "^9.2.1",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.x",
@@ -14,25 +14,28 @@
     "gulp-babel": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-plumber": "^1.2.x",
     "gulp-postcss": "^8.0.x",
     "gulp-posthtml": "^3.0.x",
     "gulp-rename": "^1.2.x",
     "gulp-sass": "^4.0.x",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svgstore": "^7.0.0",
     "gulp-uglify": "^3.0.1",
     "gulp-webp": "^3.0.0",
     "posthtml-include": "^1.1.0",
     "stylelint": "^9.6.x",
-    "stylelint-config-htmlacademy": "0.1.x"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "yargs": "^12.0.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
-    "start": "npm run build && gulp browserSync"
+    "build": "gulp build --production",
+    "start": "gulp build && gulp browserSync"
   },
   "browserslist": [
     "last 2 versions",
