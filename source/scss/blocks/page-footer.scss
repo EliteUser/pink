@@ -1,0 +1,29 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.page-footer__logo {
+  background-color: $page-pink;
+  margin-bottom: 38px;
+}
+
+.page-footer__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 38px;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer__item {
+  margin-right: 15px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

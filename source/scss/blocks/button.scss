@@ -1,0 +1,38 @@
+.button {
+  display: block;
+  padding: 15px 10px;
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: bold;
+  text-align: center;
+  color: $text-light;
+  border: 3px solid $text-light;
+  border-radius: 28px;
+
+  &:hover {
+    color: $page-pink;
+    background-color: $text-light;
+    cursor: pointer;
+  }
+
+  &:active {
+    color: $page-pink-opacity;
+  }
+}
+
+.button--solid {
+  padding: 22px 10px;
+  text-transform: uppercase;
+  background-color: $btn-green;
+  border: none;
+  border-radius: 2px;
+
+  &:hover {
+    color: $text-light;
+    background-color: $btn-green-hover;
+  }
+
+  &:active {
+    color: rgba($text-light, 0.3);
+  }
+}

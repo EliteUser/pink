@@ -1,0 +1,28 @@
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review__author {
+  margin: 0 0 14px;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: $text-dark;
+}
+
+.review__about {
+  display: none;
+}
+
+.review__text {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $page-blue;
+}

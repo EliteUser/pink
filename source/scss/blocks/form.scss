@@ -1,0 +1,114 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__description {
+  order: -1;
+  margin: 0 0 2px;
+  padding: 45px 10px 0;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-align: center;
+  color: $page-blue;
+}
+
+.form__fieldset {
+  margin: 0;
+  padding: 32px 20px 42px;
+  border: none;
+
+  &:nth-of-type(2n) {
+    position: relative;
+    padding: 111px 20px 42px;
+    background-color: $gray-bg;
+
+    .form__legend {
+      position: absolute;
+      top: 37px;
+      left: 0;
+      width: 100%;
+      padding: 0 50px;
+      line-height: 18px;
+    }
+  }
+
+  &:nth-of-type(3) {
+    .form__legend {
+      display: none;
+    }
+  }
+
+  &:nth-of-type(4) {
+    padding-top: 107px;
+  }
+}
+
+.form__fieldset--borderless {
+  border: none;
+}
+
+.form__legend {
+  @include formLabel();
+
+  text-align: center;
+}
+
+.form__textfield {
+  margin-bottom: 16px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.form__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.form__item {
+  width: 280px;
+  margin-bottom: 42px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__list--radio {
+  .form__item {
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.form__wrapper {
+  padding: 0 20px;
+}
+
+.form__button {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.form__text {
+  margin: 0 0 13px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $page-blue;
+
+  span {
+    color: $page-pink;
+  }
+}

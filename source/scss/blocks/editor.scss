@@ -1,0 +1,82 @@
+.editor__title {
+  margin: 0;
+  padding: 43px 35px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  text-align: center;
+  color: $page-blue;
+}
+
+.editor__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 41px;
+  background-color: $gray-bg;
+}
+
+.editor__picture {
+  display: block;
+  margin-bottom: 42px;
+}
+
+.editor__image {
+  display: block;
+  width: 280px;
+  height: 374px;
+  background-color: $page-pink;
+}
+
+.editor__effects {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 109px;
+  width: 100%;
+}
+
+.editor__effect {
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.editor__button {
+  width: 280px;
+}
+
+.editor__button--post {
+  color: $page-pink;
+  border-color: $page-pink;
+  margin-bottom: 12px;
+
+  &:hover {
+    color: $text-light;
+    background-color: $page-pink;
+  }
+
+  &:active {
+    color: rgba($text-light, 0.3);
+  }
+}
+
+.editor__button--cancel {
+  color: rgba($page-blue, 0.1);
+  border-color: rgba($page-blue, 0.1);
+
+  &:hover {
+    color: rgba($page-blue, 0.3);
+    background-color: transparent;
+    border-color: rgba($page-blue, 0.3);
+  }
+
+  &:active {
+    color: rgba($text-light, 0.3);
+    background-color: rgba($page-blue, 0.3);
+  }
+}

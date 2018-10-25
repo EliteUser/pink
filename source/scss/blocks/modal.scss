@@ -1,0 +1,41 @@
+.modal {
+}
+
+.modal--success {
+  .modal__box {
+    padding-bottom: 0;
+  }
+}
+
+.modal__box {
+  max-width: 450px;
+  margin: 0 auto;
+  color: $page-blue;
+  padding: 42px 0 50px;
+  text-align: center;
+  box-shadow: 0 7px 15px rgba($text-dark, 0.15);
+}
+
+.modal__title {
+  margin: 0 0 28px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.modal__text {
+  margin: 0 0 38px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.modal__wrapper {
+  padding: 41px 0 50px;
+  background-color: $gray-bg;
+}
+
+.modal__button {
+  margin: 0 auto;
+  width: 280px;
+}

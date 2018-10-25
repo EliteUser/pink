@@ -1,0 +1,95 @@
+.page-header {
+  background-color: $page-blue;
+}
+
+.page-header--inner {
+  .page-header__main-navigation {
+    margin-bottom: 0;
+  }
+
+  .page-header__wrapper {
+    padding: 31px 20px 0;
+    min-height: 170px;
+  }
+}
+
+.page-header__main-navigation {
+  margin-bottom: 396px;
+}
+
+.page-header__wrapper {
+  padding: 28px 20px 30px;
+  background-color: $page-darkblue;
+}
+
+.page-header__slogan {
+  display: none;
+}
+
+.page-header__button {
+  margin: 0 auto 34px;
+  width: 281px;
+}
+
+.page-header__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.page-header__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.page-header__link {
+  display: block;
+  background-color: $page-blue;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.page-header__link--apple {
+  width: 47px;
+  height: 56px;
+}
+
+.page-header__link--google {
+  width: 43px;
+  height: 47px;
+}
+
+.page-header__link--windows {
+  width: 44px;
+  height: 41px;
+}
+
+.page-header__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: $text-light;
+}
+
+.page-header__title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: $text-light;
+}

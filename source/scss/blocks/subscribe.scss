@@ -1,0 +1,146 @@
+.subscribe {
+  padding-top: 116px;
+  padding-bottom: 40px;
+  background-color: $gray-bg;
+  background-image: url("../../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+}
+
+.subscribe .slider__control:not(.slider__control--active) {
+  &::before {
+    border-color: $gray-bg;
+  }
+}
+
+.subscribe__list {
+  position: relative;
+  margin: 0 0 33px;
+  padding: 0;
+  list-style: none;
+  background-color: $text-light;
+}
+
+.subscribe__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: $border;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    z-index: 1;
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: $border;
+  }
+}
+
+.subscribe__plan {
+  padding: 19px 20px;
+  text-align: center;
+  color: $text-light;
+  background-color: $page-blue;
+}
+
+.subscribe__plan--hit {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 14px;
+    left: 32px;
+    z-index: 2;
+    content: "ХИТ";
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $text-light;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+    content: "";
+    width: 74px;
+    height: 74px;
+    background-image: linear-gradient(-45deg, transparent 50%, $page-pink 50%, $page-pink 78%, transparent 78%);
+  }
+}
+
+.subscribe__name {
+  margin: 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.subscribe__price {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.subscribe__sublist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subscribe__subitem {
+  padding: 15px 75px 15px 43px;
+  width: 100%;
+  height: 61px;
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: $page-blue;
+  border-bottom: 2px solid $border;
+}
+
+.subscribe__subitem--on {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    width: 31px;
+    height: 21px;
+    content: "";
+    background-color: $btn-green;
+  }
+}
+
+.subscribe__subitem--off {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 42px;
+    transform: translateY(-50%);
+    width: 27px;
+    height: 26px;
+    content: "";
+    background-color: $page-pink;
+  }
+}

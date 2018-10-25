@@ -9,8 +9,11 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  min-width: $screen-mobile;
+  max-width: $screen-tablet;
   padding: 0;
+  font-family: "Open Sans", "Roboto", "Arial", sans-serif;
 }
 
 img {
@@ -32,4 +35,24 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  min-width: $screen-mobile;
+  max-width: $screen-mobile;
+}
+
+.nojs {
+  .main-navigation__toggle {
+    display: none;
+  }
+
+  .slider__list {
+    //overflow-x: scroll;
+  }
+
+  .slider__controls {
+    //display: none;
+  }
 }

@@ -1,0 +1,38 @@
+.textarea {
+  padding: 32px 20px 46px;
+}
+
+.textarea__label {
+  @include formLabel();
+
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.textarea__message {
+  width: 100%;
+  min-height: 200px;
+  padding: 14px 18px;
+  font-size: 18px;
+  line-height: 30px;
+  color: $page-blue;
+  resize: vertical;
+  border: 2px solid $border;
+  border-radius: 1px;
+
+  &::placeholder {
+    color: $page-blue;
+  }
+
+  &:hover {
+    border-color: $page-blue;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $page-pink;
+  }
+}

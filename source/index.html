@@ -22,14 +22,14 @@
 
   <header class="page-header">
 
-    <nav class="main-navigation">
-      <div class="main-navigation__box">
-        <a class="logo">
+    <nav class="main-navigation page-header__main-navigation">
+      <div class="main-navigation__box main-navigation__box--active">
+        <a class="logo main-navigation__logo">
           <span class="visually-hidden">Pink</span>
           <!-- TODO adaptive + svg-->
           <picture class="logo__image">
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <source media="(min-width: 5960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 5660px)" srcset="img/logo-pink-white-tablet.svg">
             <img src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
           </picture>
         </a>
@@ -58,7 +58,7 @@
     <div class="page-header__wrapper">
       <h1 class="visually-hidden">Pink - приложение, которое перевернет ваш мир!</h1>
       <p class="page-header__slogan">Взгляните на жизнь иначе!</p>
-      <a class="button page-header__link" href="#">Скачать приложение</a>
+      <a class="button page-header__button" href="#">Скачать приложение</a>
 
       <ul class="page-header__list">
         <li class="page-header__item">
@@ -189,69 +189,61 @@
 
       <div class="slider">
 
-        <div class="subscribe__wrapper">
-          <ul class="subscribe__list subscribe__list--stats">
-            <li class="subscribe__item">Розовый фильтр</li>
-            <li class="subscribe__item">Смайлики</li>
-            <li class="subscribe__item">Комментарии</li>
-          </ul>
+        <ul class="subscribe__list slider__list">
+          <li class="subscribe__item slider__item">
+            <div class="subscribe__plan">
+              <h3 class="subscribe__name">База</h3>
+              <b class="subscribe__price">1,99 USD</b>
+            </div>
+            <ul class="subscribe__sublist">
+              <li class="subscribe__subitem subscribe__subitem--on">
+                Розовый фильтр <span class="visually-hidden">Есть</span>
+              </li>
+              <li class="subscribe__subitem subscribe__subitem--off">
+                Смайлики <span class="visually-hidden">Нет</span>
+              </li>
+              <li class="subscribe__subitem subscribe__subitem--off">
+                Комментарии <span class="visually-hidden">Нет</span>
+              </li>
+            </ul>
+          </li>
 
-          <ul class="subscribe__list slider__list">
-            <li class="subscribe__item slider__item">
-              <div class="subscribe__plan">
-                <h3 class="subscribe__name">База</h3>
-                <b class="subscribe__price">1,99 USD</b>
-              </div>
-              <ul class="subscribe__list subscribe__list--stats">
-                <li class="subscribe__item subscribe__item__on">
-                  <span class="visually-hidden">Есть</span>
-                </li>
-                <li class="subscribe__item subscribe__item__off">
-                  <span class="visually-hidden">Нет</span>
-                </li>
-                <li class="subscribe__item subscribe__item__off">
-                  <span class="visually-hidden">Нет</span>
-                </li>
-              </ul>
-            </li>
+          <li class="subscribe__item slider__item">
+            <div class="subscribe__plan subscribe__plan--hit">
+              <h3 class="subscribe__name">Стандарт</h3>
+              <b class="subscribe__price">3,99 USD</b>
+            </div>
+            <ul class="subscribe__sublist">
+              <li class="subscribe__subitem subscribe__subitem--on">
+                Розовый фильтр <span class="visually-hidden">Есть</span>
+              </li>
+              <li class="subscribe__subitem subscribe__subitem--on">
+                Смайлики <span class="visually-hidden">Есть</span>
+              </li>
+              <li class="subscribe__subitem subscribe__subitem--off">
+                Комментарии <span class="visually-hidden">Нет</span>
+              </li>
+            </ul>
+          </li>
 
-            <li class="subscribe__item slider__item">
-              <div class="subscribe__plan subscribe__plan--hit">
-                <h3 class="subscribe__name">Стандарт</h3>
-                <b class="subscribe__price">3,99 USD</b>
-              </div>
-              <ul class="subscribe__list subscribe__list--stats">
-                <li class="subscribe__item subscribe__item__on">
-                  <span class="visually-hidden">Есть</span>
-                </li>
-                <li class="subscribe__item subscribe__item__on">
-                  <span class="visually-hidden">Есть</span>
-                </li>
-                <li class="subscribe__item subscribe__item__off">
-                  <span class="visually-hidden">Нет</span>
-                </li>
-              </ul>
-            </li>
-
-            <li class="subscribe__item slider__item">
-              <div class="subscribe__plan">
-                <h3 class="subscribe__name">Анлим</h3>
-                <b class="subscribe__price">9,99 USD</b>
-              </div>
-              <ul class="subscribe__list subscribe__list--stats">
-                <li class="subscribe__item subscribe__item__on">
-                  <span class="visually-hidden">Есть</span>
-                </li>
-                <li class="subscribe__item subscribe__item__on">
-                  <span class="visually-hidden">Есть</span>
-                </li>
-                <li class="subscribe__item subscribe__item__on">
-                  <span class="visually-hidden">Есть</span>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+          <li class="subscribe__item slider__item">
+            <div class="subscribe__plan">
+              <h3 class="subscribe__name">Анлим</h3>
+              <b class="subscribe__price">9,99 USD</b>
+            </div>
+            <ul class="subscribe__sublist">
+              <li class="subscribe__subitem subscribe__subitem--on">
+                Розовый фильтр <span class="visually-hidden">Есть</span>
+              </li>
+              <li class="subscribe__subitem subscribe__subitem--on">
+                Смайлики <span class="visually-hidden">Есть</span>
+              </li>
+              <li class="subscribe__subitem subscribe__subitem--on">
+                Комментарии <span class="visually-hidden">Есть</span>
+              </li>
+            </ul>
+          </li>
+        </ul>
 
         <div class="slider__controls">
           <button class="slider__control slider__control--active" type="button">
@@ -283,16 +275,16 @@
         </div>
 
         <div class="contacts__item">
-          <p class="contacts__field">Приезжайте в гости:</p>
+          <p class="contacts__field">Пишите:</p>
           <div class="contacts__value">
-            <address class="contacts__address">ул. Большая Конюшенная, д. 19/8</address>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
         </div>
 
         <div class="contacts__item">
-          <p class="contacts__field">Пишите:</p>
+          <p class="contacts__field">Приезжайте в гости:</p>
           <div class="contacts__value">
-            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
           </div>
         </div>
       </div>
@@ -312,10 +304,10 @@
   <!-- Подвал -->
 
   <footer class="page-footer">
-    <a class="logo">
+    <a class="logo logo--footer page-footer__logo">
       <span class="visually-hidden">Pink</span>
-      <svg class="logo__icon" width="" height="">
-        <use href="#icon-logo-footer"></use>
+      <svg class="logo__icon" width="147" height="40">
+        <use xlink:href="#icon-logo-footer"></use>
       </svg>
     </a>
 
@@ -323,8 +315,8 @@
       <li class="page-footer__item">
         <a class="social" href="#" target="_blank" title="Наш Twitter">
           <span class="visually-hidden">Наш Twitter</span>
-          <svg class="social__icon" width="" height="">
-            <use href="#icon-twitter"></use>
+          <svg class="social__icon" width="18" height="14">
+            <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
       </li>
@@ -332,8 +324,8 @@
       <li class="page-footer__item">
         <a class="social" href="#" target="_blank" title="Наш Facebook">
           <span class="visually-hidden">Наш Facebook</span>
-          <svg class="social__icon" width="" height="">
-            <use href="#icon-fb"></use>
+          <svg class="social__icon" width="9" height="18">
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
@@ -341,7 +333,7 @@
       <li class="page-footer__item">
         <a class="social" href="#" target="_blank" title="Наш YouTube">
           <span class="visually-hidden">Наш YouTube</span>
-          <svg class="social__icon" width="" height="">
+          <svg class="social__icon" width="15" height="13">
             <use href="#icon-youtube"></use>
           </svg>
         </a>
@@ -362,6 +354,6 @@
   </footer>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/kmain.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+.textfield {
+
+}
+
+.textfield--phone {
+  .textfield__icon {
+    display: none;
+  }
+}
+
+.textfield--email {
+  .textfield__icon {
+    display: none;
+  }
+}
+
+.textfield__label {
+  @include formLabel();
+
+  display: block;
+  padding-left: 23px;
+  margin-bottom: 5px;
+}
+
+.textfield__input {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 30px;
+  color: $page-blue;
+  border: 2px solid $border;
+  border-radius: 1px;
+
+  &::placeholder {
+    color: $page-blue;
+  }
+
+  &:hover {
+    border-color: $page-blue;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $page-pink;
+  }
+}

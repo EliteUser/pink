@@ -20,17 +20,17 @@
 
   <!-- Шапка -->
 
-  <header class="page-header">
+  <header class="page-header page-header--inner">
 
-    <nav class="main-navigation">
+    <nav class="main-navigation page-header__main-navigation">
       <div class="main-navigation__box">
-        <a class="logo">
+        <a class="logo main-navigation__logo" href="index.html">
           <span class="visually-hidden">Pink</span>
           <!-- TODO adaptive + svg-->
           <picture class="logo__image">
-            <source media="(min-width: 960px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-mobile.svg" alt="Логотип Pink">
+            <source media="(min-width: 5960px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 5660px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
           </picture>
         </a>
         <button class="main-navigation__toggle" type="button" id="navigation-button">
@@ -38,7 +38,7 @@
         </button>
       </div>
 
-      <ul class="main-navigation__list main-navigation__list--show">
+      <ul class="main-navigation__list">
         <li class="main-navigation__item">
           <a class="main-navigation__link" href="index.html">Главная</a>
         </li>
@@ -71,11 +71,11 @@
     <section class="photos">
       <h2 class="visually-hidden">Фотографии пользователей</h2>
 
-      <article class="photo photo--panorama">
-        <picture class="photo__image">
+      <article class="photo photo--panorama photos__panorama">
+        <picture class="photo__picture">
           <source media="(min-width: 960px)" srcset="img/">
           <source media="(min-width: 660px)" srcset="img/">
-          <img src="img/" alt="Панорама дня от Анны">
+          <img class="photo__image" src="img/" alt="Панорама дня от Анны">
         </picture>
 
         <div class="photo__box">
@@ -89,10 +89,10 @@
       <ul class="photos__list">
         <li class="photos__item">
           <article class="photo">
-            <picture class="photo__image">
+            <picture class="photo__picture">
               <source media="(min-width: 960px)" srcset="img/">
               <source media="(min-width: 660px)" srcset="img/">
-              <img src="img/" alt="Фото Левона">
+              <img class="photo__image" src="img/" alt="Фото Левона">
             </picture>
 
             <div class="photo__box">
@@ -105,10 +105,10 @@
 
         <li class="photos__item">
           <article class="photo">
-            <picture class="photo__image">
+            <picture class="photo__picture">
               <source media="(min-width: 960px)" srcset="img/">
               <source media="(min-width: 660px)" srcset="img/">
-              <img src="img/" alt="Фото Антона">
+              <img class="photo__image" src="img/" alt="Фото Антона">
             </picture>
 
             <div class="photo__box">
@@ -121,10 +121,10 @@
 
         <li class="photos__item">
           <article class="photo">
-            <picture class="photo__image">
+            <picture class="photo__picture">
               <source media="(min-width: 960px)" srcset="img/">
               <source media="(min-width: 660px)" srcset="img/">
-              <img src="img/" alt="Фото Бориса">
+              <img class="photo__image" src="img/" alt="Фото Бориса">
             </picture>
 
             <div class="photo__box">
@@ -137,10 +137,10 @@
 
         <li class="photos__item">
           <article class="photo">
-            <picture class="photo__image">
+            <picture class="photo__picture">
               <source media="(min-width: 960px)" srcset="img/">
               <source media="(min-width: 660px)" srcset="img/">
-              <img src="img/" alt="Фото Сергея">
+              <img class="photo__image" src="img/" alt="Фото Сергея">
             </picture>
 
             <div class="photo__box">
@@ -153,10 +153,10 @@
 
         <li class="photos__item">
           <article class="photo">
-            <picture class="photo__image">
+            <picture class="photo__picture">
               <source media="(min-width: 960px)" srcset="img/">
               <source media="(min-width: 660px)" srcset="img/">
-              <img src="img/" alt="Фото Максима">
+              <img class="photo__image" src="img/" alt="Фото Максима">
             </picture>
 
             <div class="photo__box">
@@ -169,10 +169,10 @@
 
         <li class="photos__item">
           <article class="photo">
-            <picture class="photo__image">
+            <picture class="photo__picture">
               <source media="(min-width: 960px)" srcset="img/">
               <source media="(min-width: 660px)" srcset="img/">
-              <img src="img/" alt="Фото Надежды">
+              <img class="photo__image" src="img/" alt="Фото Надежды">
             </picture>
 
             <div class="photo__box">
@@ -190,34 +190,36 @@
     <section class="editor">
       <h2 class="editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
       <div class="editor__wrapper">
-        <img class="editor__image" src="img/" width="300" height="400" alt="Ваше фото">
+        <picture class="editor__picture">
+          <img class="editor__image" src="img/" width="300" height="400" alt="Ваше фото">
+        </picture>
 
         <div class="editor__effects">
 
-          <div class="effect">
+          <div class="effect effect--active editor__effect">
             <span class="visually-hidden">Кадрирование</span>
             <div class="effect__image">
-              <svg class="effect__icon" width="" height="">
+              <svg class="effect__icon" width="44" height="44">
                 <use href="#icon-crop"></use>
               </svg>
             </div>
             <div class="effect__control"></div>
           </div>
 
-          <div class="effect">
-            <span class="visually-hidden">Насыщенность</span>
+          <div class="effect editor__effect">
+            <span class="visually-hidden">Заливка</span>
             <div class="effect__image">
-              <svg class="effect__icon" width="" height="">
-                <use href="#icon-saturation"></use>
+              <svg class="effect__icon" width="48" height="43">
+                <use href="#icon-fill"></use>
               </svg>
             </div>
             <div class="effect__control"></div>
           </div>
 
-          <div class="effect">
+          <div class="effect editor__effect">
             <span class="visually-hidden">Контраст</span>
             <div class="effect__image">
-              <svg class="effect__icon" width="" height="">
+              <svg class="effect__icon" width="32" height="32">
                 <use href="#icon-contrast"></use>
               </svg>
             </div>
@@ -226,8 +228,8 @@
         </div>
 
         <div class="editor__box">
-          <a class="button editor__button" href="#">Запостить</a>
-          <a class="button editor__button" href="#">Отмена</a>
+          <a class="button editor__button editor__button--post" href="#">Запостить</a>
+          <a class="button editor__button editor__button--cancel" href="#">Отмена</a>
         </div>
       </div>
     </section>
@@ -237,10 +239,10 @@
   <!-- Подвал -->
 
   <footer class="page-footer">
-    <a class="logo">
+    <a class="logo logo--footer page-footer__logo">
       <span class="visually-hidden">Pink</span>
-      <svg class="logo__icon" width="" height="">
-        <use href="#icon-logo-footer"></use>
+      <svg class="logo__icon" width="147" height="40">
+        <use xlink:href="#icon-logo-footer"></use>
       </svg>
     </a>
 
@@ -248,8 +250,8 @@
       <li class="page-footer__item">
         <a class="social" href="#" target="_blank" title="Наш Twitter">
           <span class="visually-hidden">Наш Twitter</span>
-          <svg class="social__icon" width="" height="">
-            <use href="#icon-twitter"></use>
+          <svg class="social__icon" width="18" height="14">
+            <use xlink:href="#icon-twitter"></use>
           </svg>
         </a>
       </li>
@@ -257,8 +259,8 @@
       <li class="page-footer__item">
         <a class="social" href="#" target="_blank" title="Наш Facebook">
           <span class="visually-hidden">Наш Facebook</span>
-          <svg class="social__icon" width="" height="">
-            <use href="#icon-fb"></use>
+          <svg class="social__icon" width="9" height="18">
+            <use xlink:href="#icon-facebook"></use>
           </svg>
         </a>
       </li>
@@ -266,7 +268,7 @@
       <li class="page-footer__item">
         <a class="social" href="#" target="_blank" title="Наш YouTube">
           <span class="visually-hidden">Наш YouTube</span>
-          <svg class="social__icon" width="" height="">
+          <svg class="social__icon" width="15" height="13">
             <use href="#icon-youtube"></use>
           </svg>
         </a>

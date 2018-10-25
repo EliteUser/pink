@@ -1,7 +1,7 @@
 /* Sizes */
 
 $screen-mobile: 320px;
-$screen-tablet: 320px;
+$screen-tablet: 660px;
 $screen-desktop: 320px;
 $retina-dppx: 1.5dppx;
 $retina-dpi: 144dpi;
@@ -11,11 +11,16 @@ $retina-dpi: 144dpi;
 $text-dark: #000000;
 $text-light: #ffffff;
 $border: #e5e5e5;
+$gray-bg: #f2f2f2;
 
 $page-pink: #d22856;
+$page-pink-opacity: rgba(210, 40, 86, 0.3);
 $page-blue: #283645;
 $page-darkblue: #1d2631;
 $btn-green: #2aab6d;
+$btn-green-hover: #1c9b5e;
 $btn-cancel: #b5b9be;
 
-$gray-bg: #f2f2f2;
+$black-opacity: rgba(0, 0, 0, 0.3);
+$white-opacity: rgba(255, 255, 255, 0.3);
+$toggle-shadow: #555c64;

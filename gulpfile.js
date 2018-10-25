@@ -9,6 +9,7 @@ const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
 const autoprefixer = require("autoprefixer");
 const minify = require("gulp-csso");
+const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
@@ -19,7 +20,7 @@ const concat = require("gulp-concat");
 const uglifyJs = require("gulp-uglify");
 const gulpIf = require("gulp-if");
 const sourcemaps = require("gulp-sourcemaps");
-const argv = require('yargs').argv;
+const argv = require("yargs").argv;
 
 const isProduction = ( argv.production !== undefined );
 
@@ -41,16 +42,17 @@ gulp.task("browserSync", function () {
     ui: false
   });
 
-  gulp.watch(`${config.src}/sass/**/*.{scss,sass}`, gulp.series("style"));
+  gulp.watch(`${config.src}/scss/**/*.{scss,sass}`, gulp.series("style"));
   gulp.watch(`${config.src}/js/**/*.js`, gulp.series("js"));
   gulp.watch(`${config.src}/**/*.html`, gulp.series("html"));
+  gulp.watch(`${config.src}/**/*.svg`, gulp.series("build"));
   gulp.watch(`${config.build}/**/*.*`).on("change", browserSync.reload);
 });
 
 /* Сборка стилей и минификация */
 
 gulp.task("style", function () {
-  return gulp.src(`${config.src}/sass/style.scss`)
+  return gulp.src(`${config.src}/scss/style.scss`)
     .pipe(plumber())
     .pipe(
       gulpIf(!isProduction, sourcemaps.init())
@@ -135,6 +137,9 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest(config.build))
 });
 

@@ -1,0 +1,80 @@
+.slider__list {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.slider__item {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__control {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: rgba($page-blue, 0.3);
+    border: 3px solid $text-light;
+    border-radius: 50%;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    &::before {
+      background-color: rgba($page-blue, 0.6);
+    }
+  }
+
+  &:active {
+    &::before {
+      background-color: rgba($page-blue, 0.1);
+    }
+  }
+}
+
+.slider__control--active {
+  &::before {
+    background-color: $text-light;
+    border-color: $page-blue;
+  }
+
+  &:hover {
+    cursor: auto;
+
+    &::before {
+      background-color: $text-light;
+    }
+  }
+
+  &:active {
+    outline: none;
+
+    &::before {
+      background-color: $text-light;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.slider__toggles {
+  display: none;
+}

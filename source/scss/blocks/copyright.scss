@@ -1,0 +1,31 @@
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.copyright__text {
+  margin-right: 15px;
+  font-size: 14px;
+  line-height: 18px;
+  color: $page-blue;
+}
+
+.copyright__link {
+  display: block;
+  padding-top: 2px;
+}
+
+.copyright__icon {
+  fill: $page-pink;
+
+  &:hover {
+    fill: $page-blue;
+  }
+
+  &:active {
+    fill: $page-blue;
+    opacity: 0.3;
+  }
+}
