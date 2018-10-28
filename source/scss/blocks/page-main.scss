@@ -5,4 +5,9 @@
   line-height: 30px;
   text-align: center;
   color: $page-blue;
+
+  @media (min-width: $screen-tablet) {
+    padding: 92px 50px 76px;
+    font-size: 18px;
+  }
 }

@@ -1,3 +1,39 @@
 .research {
   display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: block;
+    padding: 96px 34px 50px 329px;
+  }
+}
+
+.research__title {
+  margin: 0 0 10px;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+  color: $text-dark;
+}
+
+.research__description {
+  margin: 0 0 11px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $page-blue;
+}
+
+.research__link {
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  color: $page-pink;
+
+  &:hover {
+    color: $page-blue;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: rgba($page-blue, 0.3);
+  }
 }

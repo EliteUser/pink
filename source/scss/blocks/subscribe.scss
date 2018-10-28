@@ -5,11 +5,28 @@
   background-image: url("../../img/bg-triangle-white.svg");
   background-repeat: no-repeat;
   background-position: center 0;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 109px;
+    padding-bottom: 70px;
+  }
 }
 
 .subscribe .slider__control:not(.slider__control--active) {
   &::before {
     border-color: $gray-bg;
+  }
+}
+
+.subscribe__slider {
+  @media (min-width: $screen-tablet) {
+    .subscribe__item {
+      width: 155px;
+    }
+
+    .slider__controls {
+      display: none;
+    }
   }
 }
 
@@ -19,6 +36,13 @@
   padding: 0;
   list-style: none;
   background-color: $text-light;
+
+  @media (min-width: $screen-tablet) {
+    width: 660px;
+    margin: 0 auto;
+    padding: 0 20px 0 175px;
+    background-color: $gray-bg;
+  }
 }
 
 .subscribe__item {
@@ -45,6 +69,35 @@
     width: 2px;
     background-color: $border;
   }
+
+  @media (min-width: $screen-tablet) {
+    &::before {
+      width: 1px;
+      left: 0;
+    }
+
+    &::after {
+      width: 1px;
+      right: 0;
+    }
+  }
+}
+
+.subscribe__item--headings {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    position: absolute;
+    display: block;
+    left: 20px;
+    top: 78px;
+
+    .subscribe__subitem {
+      padding: 8px 17px;
+      font-size: 14px;
+      text-transform: none;
+    }
+  }
 }
 
 .subscribe__plan {
@@ -52,6 +105,10 @@
   text-align: center;
   color: $text-light;
   background-color: $page-blue;
+
+  @media (min-width: $screen-tablet) {
+    padding: 11px 10px 7px;
+  }
 }
 
 .subscribe__plan--hit {
@@ -82,6 +139,20 @@
     height: 74px;
     background-image: linear-gradient(-45deg, transparent 50%, $page-pink 50%, $page-pink 78%, transparent 78%);
   }
+
+  @media (min-width: $screen-tablet) {
+    &::before {
+      top: 7px;
+      left: 8px;
+    }
+
+    &::after {
+      left: 0;
+      width: 60px;
+      height: 60px;
+      background-image: linear-gradient(-45deg, transparent 50%, $page-pink 50%, $page-pink 82%, transparent 82%);
+    }
+  }
 }
 
 .subscribe__name {
@@ -90,12 +161,20 @@
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 16px;
+  }
 }
 
 .subscribe__price {
   font-size: 24px;
   line-height: 30px;
   font-weight: 300;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 18px;
+  }
 }
 
 .subscribe__sublist {
@@ -113,6 +192,13 @@
   text-transform: uppercase;
   color: $page-blue;
   border-bottom: 2px solid $border;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0;
+    height: 47px;
+    font-size: 0;
+    background-color: $text-light;
+  }
 }
 
 .subscribe__subitem--on {
@@ -127,6 +213,12 @@
     height: 21px;
     content: "";
     background-color: $btn-green;
+
+    @media (min-width: $screen-tablet) {
+      right: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 
@@ -142,5 +234,11 @@
     height: 26px;
     content: "";
     background-color: $page-pink;
+
+    @media (min-width: $screen-tablet) {
+      right: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }

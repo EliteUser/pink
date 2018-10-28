@@ -1,16 +1,105 @@
 .textfield {
-
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .textfield--phone {
   .textfield__icon {
     display: none;
   }
+
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    flex-wrap: wrap;
+    margin-bottom: 29px;
+
+    .textfield__box {
+      position: relative;
+      width: 100%;
+      margin-bottom: 9px;
+
+      &::before {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        content: "";
+        width: 60px;
+        height: 60px;
+        background-color: $border;
+      }
+    }
+
+    .textfield__label {
+      display: block;
+      order: 1;
+      margin-right: 0;
+      margin-left: 19px;
+    }
+
+    .textfield__input {
+      padding-right: 80px;
+    }
+
+    .textfield__icon {
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 60px;
+      height: 60px;
+      transform: scale(0.33);
+      fill: $page-pink;
+    }
+  }
 }
 
 .textfield--email {
   .textfield__icon {
     display: none;
+  }
+
+  @media (min-width: $screen-tablet) {
+    flex-wrap: wrap;
+
+    .textfield__box {
+      position: relative;
+      width: 100%;
+      margin-bottom: 9px;
+
+      &::before {
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        content: "";
+        width: 60px;
+        height: 60px;
+        background-color: $border;
+      }
+    }
+
+    .textfield__label {
+      display: block;
+      order: 1;
+      margin-right: 0;
+      margin-left: 19px;
+    }
+
+    .textfield__input {
+      padding-right: 80px;
+    }
+
+    .textfield__icon {
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      width: 60px;
+      height: 60px;
+      transform: scale(0.33);
+      fill: $page-pink;
+    }
   }
 }
 
@@ -20,6 +109,12 @@
   display: block;
   padding-left: 23px;
   margin-bottom: 5px;
+
+  @media (min-width: $screen-tablet) {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
 }
 
 .textfield__input {

@@ -5,16 +5,15 @@
   height: 66px;
   padding: 0 20px;
   background-color: $black-opacity;
+
+  @media (min-width: $screen-tablet) {
+    height: 109px;
+  }
 }
 
 .main-navigation__box--active {
   background-color: $page-blue;
   box-shadow: inset 0 -1px 0 0 $text-dark;
-}
-
-.main-navigation__logo {
-  width: 75px;
-  height: 23px;
 }
 
 .main-navigation__toggle {

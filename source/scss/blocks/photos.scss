@@ -4,12 +4,22 @@
 
 .photos__panorama {
   margin-bottom: 20px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 50px;
+  }
 }
 
 .photos__list {
   margin: 0;
   padding: 0 20px;
   list-style: none;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .photos__item {
@@ -17,5 +27,11 @@
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-tablet) {
+    &:last-child {
+      margin-bottom: 20px;
+    }
   }
 }

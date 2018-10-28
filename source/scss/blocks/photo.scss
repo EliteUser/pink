@@ -1,20 +1,70 @@
 .photo {
-
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 }
 
 .photo--panorama {
   .photo__image {
+    position: relative;
+    display: block;
     width: 320px;
     height: 137px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      z-index: 1;
+      content: "Панорама дня";
+      width: 140px;
+      height: 36px;
+      font-size: 12px;
+      line-height: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: $text-light;
+      background-color: $page-pink;
+    }
   }
 
   .photo__box {
     margin: 0 auto;
   }
-}
 
-.photo__picture {
+  @media (min-width: $screen-tablet) {
+    .photo__picture {
+      height: 509px;
+    }
 
+    .photo__image {
+      width: 660px;
+      height: 509px;
+
+      &::before {
+        top: 57px;
+      }
+    }
+
+    .photo__box {
+      position: relative;
+      width: 100%;
+      max-width: 620px;
+    }
+
+    .photo__description {
+      margin-bottom: 0;
+    }
+
+    .photo__likes {
+      position: absolute;
+      top: 25px;
+      right: 29px;
+    }
+  }
 }
 
 .photo__image {
@@ -23,14 +73,27 @@
   width: 280px;
   height: 180px;
   background-color: $gray-bg;
+
+  @media (min-width: $screen-tablet) {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .photo__box {
   margin: 0 auto;
-  max-width: 280px;
+  width: 280px;
   padding: 18px 17px 20px;
   color: $page-blue;
   background-color: $gray-bg;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    flex-grow: 1;
+    padding: 24px 28px 25px;
+  }
 }
 
 .photo__author {
@@ -61,7 +124,6 @@
   text-transform: uppercase;
   color: $page-pink;
 
-
   &::before {
     position: absolute;
     top: 50%;
@@ -71,5 +133,16 @@
     width: 13px;
     height: 12px;
     background-color: $page-pink;
+  }
+
+  @media (min-width: $screen-tablet) {
+    margin-top: auto;
+    padding-left: 0;
+    padding-right: 30px;
+
+    &::before {
+      left: initial;
+      right: 0;
+    }
   }
 }

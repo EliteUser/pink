@@ -8,7 +8,7 @@
 
 .checkbox__label {
   display: block;
-  padding: 5px 30px 5px 70px;
+  padding: 5px 10px 5px 70px;
   font-size: 18px;
   line-height: 30px;
   color: $page-blue;
@@ -55,6 +55,10 @@
     &::before {
       border-color: $page-pink;
     }
+  }
+
+  @media (min-width: $screen-tablet) {
+    padding-left: 60px;
   }
 }
 

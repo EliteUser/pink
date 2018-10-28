@@ -11,10 +11,23 @@
   font-weight: bold;
   text-align: center;
   color: $text-dark;
+
+  @media (min-width: $screen-tablet) {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
 }
 
 .review__about {
   display: none;
+  margin: 0;
+  font-size: 14px;
+  line-height: 30px;
+  color: $page-blue;
+
+  @media (min-width: $screen-tablet) {
+    display: block;
+  }
 }
 
 .review__text {
@@ -25,4 +38,11 @@
   line-height: 30px;
   text-align: center;
   color: $page-blue;
+
+  @media (min-width: $screen-tablet) {
+    order: -1;
+    max-width: 650px;
+    margin-bottom: 35px;
+    font-size: 18px;
+  }
 }

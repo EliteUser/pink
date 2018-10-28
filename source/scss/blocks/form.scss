@@ -4,7 +4,7 @@
 }
 
 .form__description {
-  order: -1;
+  order: -5;
   margin: 0 0 2px;
   padding: 45px 10px 0;
   font-size: 14px;
@@ -12,6 +12,13 @@
   font-weight: normal;
   text-align: center;
   color: $page-blue;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0 auto;
+    padding: 92px 10px 41px;
+    max-width: 550px;
+    font-size: 18px;
+  }
 }
 
 .form__fieldset {
@@ -43,10 +50,55 @@
   &:nth-of-type(4) {
     padding-top: 107px;
   }
+
+  @media (min-width: $screen-tablet) {
+    margin: 15px 20px 36px;
+    border: 2px solid $border;
+
+    &:nth-of-type(1) {
+      order: -4;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 20px;
+      margin-bottom: 65px;
+      padding: 43px 58px 49px;
+    }
+
+    &:nth-of-type(2n) {
+      background-color: transparent;
+
+      .form__legend {
+        position: static;
+        width: auto;
+        padding: 0 25px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      order: -2;
+      padding: 31px 58px 26px;
+
+      .form__legend {
+        display: block;
+        margin: 0;
+        padding: 0 25px;
+      }
+    }
+
+    &:nth-of-type(4) {
+      order: -3;
+      padding: 43px 60px 54px;
+    }
+  }
 }
 
 .form__fieldset--borderless {
   border: none;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0;
+  }
 }
 
 .form__legend {
@@ -60,6 +112,10 @@
 
   &:last-of-type {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 50px;
   }
 }
 
@@ -93,11 +149,24 @@
 
 .form__wrapper {
   padding: 0 20px;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 67px;
+    margin-bottom: 50px;
+  }
 }
 
 .form__button {
   width: 100%;
   margin-bottom: 35px;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0;
+    width: 300px;
+  }
 }
 
 .form__text {
@@ -110,5 +179,9 @@
 
   span {
     color: $page-pink;
+  }
+
+  @media (min-width: $screen-tablet) {
+    margin: 0;
   }
 }

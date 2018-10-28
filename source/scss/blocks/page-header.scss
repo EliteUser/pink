@@ -11,24 +11,59 @@
     padding: 31px 20px 0;
     min-height: 170px;
   }
+
+  @media (min-width: $screen-tablet) {
+    .page-header__wrapper {
+      height: 330px;
+      padding: 73px 20px 50px;
+    }
+  }
 }
 
 .page-header__main-navigation {
   margin-bottom: 396px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .page-header__wrapper {
   padding: 28px 20px 30px;
   background-color: $page-darkblue;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 95px 320px 110px 20px;
+    background-color: transparent;
+  }
 }
 
 .page-header__slogan {
   display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: block;
+    margin: 0 0 32px 50px;
+    max-width: 200px;
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 300;
+    text-align: center;
+    color: $text-light;
+  }
 }
 
 .page-header__button {
   margin: 0 auto 34px;
   width: 281px;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0 0 48px;
+    width: 300px;
+  }
 }
 
 .page-header__list {
@@ -39,6 +74,11 @@
   margin: 0 0 20px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $screen-tablet) {
+    margin-left: 47px;
+    margin-bottom: 34px;
+  }
 }
 
 .page-header__item {
@@ -51,7 +91,7 @@
 
 .page-header__link {
   display: block;
-  background-color: $page-blue;
+  background-color: $page-pink;
 
   &:hover {
     opacity: 0.75;
@@ -84,6 +124,11 @@
   font-weight: 300;
   text-align: center;
   color: $text-light;
+
+  @media (min-width: $screen-tablet) {
+    max-width: 300px;
+    font-size: 18px;
+  }
 }
 
 .page-header__title {
@@ -92,4 +137,10 @@
   font-weight: 300;
   text-align: center;
   color: $text-light;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0 auto;
+    max-width: 480px;
+    font-size: 50px;
+  }
 }

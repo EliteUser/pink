@@ -1,5 +1,10 @@
 .reviews {
   padding: 43px 0 10px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: -5px;
+    padding: 74px 0 0;
+  }
 }
 
 .reviews__list {

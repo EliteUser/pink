@@ -1,7 +1,20 @@
 .logo {
+  width: 75px;
+  height: 23px;
 
+  @media (min-width: $screen-tablet) {
+    width: 147px;
+    height: 40px;
+  }
 }
 
 .logo__image {
   display: block;
+}
+
+.logo--footer {
+  @media (min-width: $screen-tablet) {
+    width: 147px;
+    height: 40px;
+  }
 }

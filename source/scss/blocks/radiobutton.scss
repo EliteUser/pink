@@ -50,6 +50,10 @@
       border-color: $page-pink;
     }
   }
+
+  @media (min-width: $screen-tablet) {
+    padding-left: 57px;
+  }
 }
 
 .radiobutton__input:checked + .radiobutton__label::after {

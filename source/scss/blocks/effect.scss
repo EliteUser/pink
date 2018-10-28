@@ -1,3 +1,15 @@
+.effect {
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid rgba($page-blue, 0.1);
+  }
+}
+
 .effect--active {
   .effect__icon {
     fill: $page-pink;
@@ -9,12 +21,27 @@
   }
 }
 
+.effect__image {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+
+  @media (min-width: $screen-tablet) {
+    transform-origin: 0;
+    transform: scale(0.5);
+  }
+}
+
 .effect__icon {
   fill: rgba($page-blue, 0.3);
 
   &:hover {
     cursor: pointer;
     fill: rgba($page-blue, 0.5);
+  }
+
+  @media (min-width: $screen-tablet) {
+    fill: $page-pink;
   }
 }
 
@@ -51,6 +78,23 @@
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    top: 0;
+    width: 202px;
+    height: 50px;
+    border-bottom: none;
+
+    &::before {
+      top: 20px;
+      width: 202px;
+    }
+
+    &::after {
+      top: 20px;
     }
   }
 }

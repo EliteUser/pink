@@ -1,5 +1,12 @@
 .textarea {
   padding: 32px 20px 46px;
+
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    margin: 0 20px;
+    padding: 45px 58px 47px;
+    border: 2px solid $border;
+  }
 }
 
 .textarea__label {
@@ -9,6 +16,16 @@
   margin-bottom: 10px;
   width: 100%;
   text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 0 40px;
+    background-color: $text-light;
+  }
 }
 
 .textarea__message {
@@ -34,5 +51,9 @@
   &:focus {
     outline: none;
     border-color: $page-pink;
+  }
+
+  @media (min-width: $screen-tablet) {
+    min-height: 194px;
   }
 }
