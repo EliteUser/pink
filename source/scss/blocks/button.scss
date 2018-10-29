@@ -18,6 +18,10 @@
   &:active {
     color: $page-pink-opacity;
   }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 21px;
+  }
 }
 
 .button--solid {

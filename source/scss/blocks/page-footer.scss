@@ -9,6 +9,10 @@
     justify-content: space-between;
     padding: 35px 20px;
   }
+
+  @media (min-width: $screen-desktop) {
+    padding: 67px 10px;
+  }
 }
 
 .page-footer__logo {

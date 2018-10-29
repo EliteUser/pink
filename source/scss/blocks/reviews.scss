@@ -5,6 +5,11 @@
     margin-bottom: -5px;
     padding: 74px 0 0;
   }
+
+  @media (min-width: $screen-desktop) {
+    position: relative;
+    padding: 184px 50px 20px;
+  }
 }
 
 .reviews__list {
@@ -15,4 +20,10 @@
 
 .reviews__item {
   margin-bottom: 20px;
+}
+
+.reviews .reviews__controls {
+  @media (min-width: $screen-desktop) {
+    display: none;
+  }
 }

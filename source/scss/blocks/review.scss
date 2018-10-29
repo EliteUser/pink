@@ -16,6 +16,10 @@
     font-size: 20px;
     margin-bottom: 2px;
   }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 24px;
+  }
 }
 
 .review__about {
@@ -27,6 +31,10 @@
 
   @media (min-width: $screen-tablet) {
     display: block;
+  }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 18px;
   }
 }
 
@@ -44,5 +52,9 @@
     max-width: 650px;
     margin-bottom: 35px;
     font-size: 18px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: 800px;
   }
 }

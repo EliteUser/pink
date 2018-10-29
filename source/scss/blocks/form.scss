@@ -1,6 +1,11 @@
 .form {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $screen-desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .form__description {
@@ -18,6 +23,10 @@
     padding: 92px 10px 41px;
     max-width: 550px;
     font-size: 18px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: 800px;
   }
 }
 
@@ -91,6 +100,44 @@
       padding: 43px 60px 54px;
     }
   }
+
+  @media (min-width: $screen-desktop) {
+    margin: 15px 10px 36px;
+    flex-basis: 100%;
+
+    &:nth-of-type(1) {
+      flex-basis: 50%;
+      padding: 43px 35px 35px 8px;
+    }
+
+    &:nth-of-type(2) {
+      padding-right: 0;
+      padding-bottom: 14px;
+    }
+
+    &:nth-of-type(3) {
+      padding: 28px 58px 13px;
+
+      .form__textfield {
+        margin-bottom: 0;
+        width: 374px;
+
+        &:first-of-type {
+          margin-right: 72px;
+        }
+      }
+    }
+
+    &:nth-of-type(4) {
+      margin: 30px 10px 37px 36px;
+      padding: 44px 20px 53px 75px;
+      flex-basis: 434px;
+
+      .form__legend {
+        padding: 0 5px;
+      }
+    }
+  }
 }
 
 .form__fieldset--borderless {
@@ -98,6 +145,13 @@
 
   @media (min-width: $screen-tablet) {
     margin: 0;
+  }
+}
+
+.form__box {
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    align-items: flex-start;
   }
 }
 
@@ -117,6 +171,10 @@
   @media (min-width: $screen-tablet) {
     margin-bottom: 50px;
   }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 52px;
+  }
 }
 
 .form__list {
@@ -135,6 +193,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @media (min-width: $screen-desktop) {
+    width: 270px;
+  }
 }
 
 .form__list--radio {
@@ -144,6 +206,17 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+}
+
+.form__textarea {
+  @media (min-width: $screen-tablet) {
+    margin: 0 20px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    flex-basis: 100%;
+    margin: 0 10px;
   }
 }
 
@@ -157,6 +230,13 @@
     margin-top: 67px;
     margin-bottom: 50px;
   }
+
+  @media (min-width: $screen-desktop) {
+    flex-basis: 100%;
+    margin-top: 65px;
+    margin-bottom: 2px;
+    padding: 0 10px;
+  }
 }
 
 .form__button {
@@ -166,6 +246,10 @@
   @media (min-width: $screen-tablet) {
     margin: 0;
     width: 300px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 18px;
   }
 }
 

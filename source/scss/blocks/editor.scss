@@ -1,3 +1,10 @@
+.editor {
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 30px;
+    padding: 0 10px;
+  }
+}
+
 .editor__title {
   margin: 0;
   padding: 43px 35px;
@@ -10,6 +17,10 @@
   @media (min-width: $screen-tablet) {
     font-size: 18px;
     padding: 48px 35px 69px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 7px 35px 66px;
   }
 }
 
@@ -24,6 +35,11 @@
     position: relative;
     padding: 57px 20px 55px 365px;
   }
+
+  @media (min-width: $screen-desktop) {
+    min-height: 514px;
+    padding: 57px 62px 57px 470px;
+  }
 }
 
 .editor__picture {
@@ -35,6 +51,10 @@
     top: 57px;
     left: 20px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $screen-desktop) {
+    left: 80px;
   }
 }
 
@@ -84,12 +104,27 @@
   }
 }
 
+.editor__box {
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 100%;
+  }
+}
+
 .editor__button {
   width: 280px;
 
   @media (min-width: $screen-tablet) {
     width: 260px;
     margin-right: 10px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin: 0;
+    width: 183px;
+    font-size: 18px;
   }
 }
 
@@ -109,6 +144,10 @@
 
   @media (min-width: $screen-tablet) {
     margin-bottom: 24px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin: 0;
   }
 }
 

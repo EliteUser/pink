@@ -14,8 +14,15 @@
 
   @media (min-width: $screen-tablet) {
     .page-header__wrapper {
-      height: 330px;
+      min-height: 330px;
       padding: 73px 20px 50px;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    .page-header__wrapper {
+      min-height: 284px;
+      padding: 66px 20px 30px;
     }
   }
 }
@@ -39,6 +46,10 @@
     padding: 95px 320px 110px 20px;
     background-color: transparent;
   }
+
+  @media (min-width: $screen-desktop) {
+    padding: 109px 500px 121px 10px;
+  }
 }
 
 .page-header__slogan {
@@ -54,6 +65,13 @@
     text-align: center;
     color: $text-light;
   }
+
+  @media (min-width: $screen-desktop) {
+    margin: 0 0 51px 25px;
+    max-width: 250px;
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .page-header__button {
@@ -63,6 +81,10 @@
   @media (min-width: $screen-tablet) {
     margin: 0 0 48px;
     width: 300px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 70px;
   }
 }
 
@@ -78,6 +100,10 @@
   @media (min-width: $screen-tablet) {
     margin-left: 47px;
     margin-bottom: 34px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 53px;
   }
 }
 
@@ -142,5 +168,9 @@
     margin: 0 auto;
     max-width: 480px;
     font-size: 50px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: 760px;
   }
 }

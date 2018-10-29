@@ -140,24 +140,25 @@
 
       <fieldset class="form__fieldset">
         <legend class="form__legend">Контактная информация</legend>
-
-        <div class="textfield textfield--phone form__textfield">
-          <label class="textfield__label" for="userPhone">Номер телефона</label>
-          <div class="textfield__box">
-            <input class="textfield__input" type="tel" name="userPhone" id="userPhone" placeholder="Номер, пожалуйста" required>
-            <svg class="textfield__icon" width="20" height="19">
-              <use href="#icon-phone"></use>
-            </svg>
+        <div class="form__box">
+          <div class="textfield textfield--phone form__textfield">
+            <label class="textfield__label" for="userPhone">Номер телефона</label>
+            <div class="textfield__box">
+              <input class="textfield__input" type="tel" name="userPhone" id="userPhone" placeholder="Номер, пожалуйста" required>
+              <svg class="textfield__icon" width="20" height="19">
+                <use href="#icon-phone"></use>
+              </svg>
+            </div>
           </div>
-        </div>
 
-        <div class="textfield textfield--email form__textfield">
-          <label class="textfield__label" for="userEmail">Адрес почты</label>
-          <div class="textfield__box">
-            <input class="textfield__input" type="email" name="userEmail" id="userEmail" placeholder="Введите почту *" required>
-            <svg class="textfield__icon" width="18" height="13">
-              <use href="#icon-mail"></use>
-            </svg>
+          <div class="textfield textfield--email form__textfield">
+            <label class="textfield__label" for="userEmail">Адрес почты</label>
+            <div class="textfield__box">
+              <input class="textfield__input" type="email" name="userEmail" id="userEmail" placeholder="Введите почту *" required>
+              <svg class="textfield__icon" width="18" height="13">
+                <use href="#icon-mail"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </fieldset>
@@ -193,7 +194,7 @@
 
       <!-- Опишите свои эмоции -->
 
-      <div class="textarea">
+      <div class="textarea form__textarea">
         <label class="textarea__label" for="userMessage">Опишите свои эмоции</label>
         <textarea class="textarea__message" name="message" id="userMessage" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
       </div>

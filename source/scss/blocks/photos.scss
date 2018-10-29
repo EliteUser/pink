@@ -20,6 +20,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+
+  @media (min-width: $screen-desktop) {
+    padding: 0 10px;
+  }
 }
 
 .photos__item {
@@ -32,6 +36,14 @@
   @media (min-width: $screen-tablet) {
     &:last-child {
       margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 54px;
+
+    &:last-child {
+      margin-bottom: 54px;
     }
   }
 }

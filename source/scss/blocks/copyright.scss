@@ -10,6 +10,10 @@
   font-size: 14px;
   line-height: 18px;
   color: $page-blue;
+
+  @media (min-width: $screen-desktop) {
+    font-size: 18px;
+  }
 }
 
 .copyright__link {

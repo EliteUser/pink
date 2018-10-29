@@ -3,9 +3,12 @@
 
   @media (min-width: $screen-tablet) {
     position: relative;
-    margin: 0 20px;
     padding: 45px 58px 47px;
     border: 2px solid $border;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 42px 58px 39px;
   }
 }
 
@@ -55,5 +58,9 @@
 
   @media (min-width: $screen-tablet) {
     min-height: 194px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    min-height: 129px;
   }
 }

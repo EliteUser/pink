@@ -1,3 +1,12 @@
+.main-navigation {
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $black-opacity;
+  }
+}
+
 .main-navigation__box {
   position: relative;
   display: flex;
@@ -8,6 +17,12 @@
 
   @media (min-width: $screen-tablet) {
     height: 109px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 0 10px;
+    height: 110px;
+    background-color: transparent;
   }
 }
 
@@ -33,6 +48,10 @@
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: none;
   }
 }
 
@@ -128,10 +147,24 @@
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+  }
 }
 
 .main-navigation__list--show {
   display: block;
+}
+
+.main-navigation__item {
+  @media (min-width: $screen-desktop) {
+    margin-right: 60px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .main-navigation__link {
@@ -151,5 +184,12 @@
 
   &[href]:active {
     color: $page-pink-opacity;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 10px;
+    font-weight: normal;
+    text-transform: none;
+    box-shadow: none;
   }
 }

@@ -77,4 +77,29 @@
 
 .slider__toggles {
   display: none;
+
+  @media (min-width: $screen-desktop) {
+    position: absolute;
+    top: 212px;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+.slider__toggle {
+  width: 22px;
+  height: 41px;
+  background-color: $gray-bg;
+  border: none;
+
+  &:hover {
+
+  }
+
+  &:active {
+
+  }
 }

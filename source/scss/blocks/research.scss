@@ -5,6 +5,11 @@
     display: block;
     padding: 96px 34px 50px 329px;
   }
+
+  @media (min-width: $screen-desktop) {
+    padding: 120px 50px 114px 376px;
+    background-color: $gray-bg;
+  }
 }
 
 .research__title {
@@ -13,6 +18,10 @@
   line-height: 36px;
   font-weight: bold;
   color: $text-dark;
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 20px;
+  }
 }
 
 .research__description {
@@ -20,6 +29,12 @@
   font-size: 14px;
   line-height: 24px;
   color: $page-blue;
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 31px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .research__link {
@@ -35,5 +50,10 @@
 
   &:active {
     color: rgba($page-blue, 0.3);
+  }
+
+  @media (min-width: $screen-desktop) {
+    font-size: 18px;
+    line-height: 30px;
   }
 }
