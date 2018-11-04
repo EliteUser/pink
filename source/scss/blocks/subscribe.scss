@@ -265,9 +265,12 @@
     right: 40px;
     transform: translateY(-50%);
     width: 31px;
-    height: 21px;
+    height: 26px;
     content: "";
-    background-color: $btn-green;
+    background-image: url("../img/yes-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
 
     @media (min-width: $screen-tablet) {
       right: 0;
@@ -286,9 +289,11 @@
     right: 42px;
     transform: translateY(-50%);
     width: 27px;
-    height: 26px;
+    height: 28px;
     content: "";
-    background-color: $page-pink;
+    background-image: url("../img/no-icon.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
 
     @media (min-width: $screen-tablet) {
       right: 0;

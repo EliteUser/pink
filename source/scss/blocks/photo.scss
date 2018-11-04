@@ -7,11 +7,11 @@
 }
 
 .photo--panorama {
-  .photo__image {
+  .photo__picture {
     position: relative;
     display: block;
+    margin: 0 auto;
     width: 320px;
-    height: 137px;
 
     &::before {
       position: absolute;
@@ -31,22 +31,29 @@
     }
   }
 
+  .photo__image {
+    display: block;
+    width: 320px;
+    height: 137px;
+  }
+
   .photo__box {
     margin: 0 auto;
   }
 
   @media (min-width: $screen-tablet) {
     .photo__picture {
-      height: 509px;
-    }
-
-    .photo__image {
       width: 660px;
       height: 509px;
 
       &::before {
         top: 57px;
       }
+    }
+
+    .photo__image {
+      width: 660px;
+      height: 509px;
     }
 
     .photo__box {
@@ -67,19 +74,26 @@
   }
 
   @media (min-width: $screen-desktop) {
-    .photo__picture {
-      width: 1200px;
-      height: 506px;
+    .photo__wrapper {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      overflow: hidden;
     }
 
-    .photo__image {
-      width: 1200px;
+    .photo__picture {
+      min-width: 1200px;
       height: 506px;
 
       &::before {
         top: 54px;
         right: 130px;
       }
+    }
+
+    .photo__image {
+      width: 1200px;
+      height: 506px;
     }
 
     .photo__box {
@@ -157,7 +171,9 @@
     content: "";
     width: 13px;
     height: 12px;
-    background-color: $page-pink;
+    background-image: url("../img/icon-heart.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   @media (min-width: $screen-tablet) {

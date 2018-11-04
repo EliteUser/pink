@@ -21,41 +21,40 @@
   <!-- Шапка -->
 
   <header class="page-header page-header--inner">
+    <div class="page-header__main-navigation">
+      <div class="container">
 
-    <nav class="main-navigation page-header__main-navigation">
-      <div class="main-navigation__box">
-        <a class="logo main-navigation__logo" href="index.html">
-          <span class="visually-hidden">Pink</span>
-          <!-- TODO adaptive + svg-->
-          <picture class="logo__image">
-            <source media="(min-width: 5960px)" srcset="img/logo-desktop.svg">
-            <source media="(min-width: 5660px)" srcset="img/logo-tablet.svg">
-            <img src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
-          </picture>
-        </a>
-        <button class="main-navigation__toggle" type="button" id="navigation-button">
-          <span class="main-navigation__toggle-icon">Меню</span>
-        </button>
+        <nav class="main-navigation">
+          <div class="main-navigation__box">
+            <a class="logo main-navigation__logo" href="index.html">
+              <span class="visually-hidden">Pink</span>
+              <include src="build/img/logo-main.svg"></include>
+            </a>
+            <button class="main-navigation__toggle" type="button" id="navigation-button">
+              <span class="main-navigation__toggle-icon">Меню</span>
+            </button>
+          </div>
+
+          <ul class="main-navigation__list">
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link">Фотографии</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="form.html">Конкурс</a>
+            </li>
+            <li class="main-navigation__item">
+              <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
+                Academy</a>
+            </li>
+          </ul>
+        </nav>
       </div>
+    </div>
 
-      <ul class="main-navigation__list">
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="index.html">Главная</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link">Фотографии</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="form.html">Конкурс</a>
-        </li>
-        <li class="main-navigation__item">
-          <a class="main-navigation__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML
-            Academy</a>
-        </li>
-      </ul>
-    </nav>
-
-    <div class="page-header__wrapper">
+    <div class="container page-header__wrapper">
       <h1 class="page-header__title">Фотографии<br>пользователей</h1>
     </div>
   </header>
@@ -63,7 +62,8 @@
   <!-- Основная часть -->
 
   <main class="page-main">
-    <p class="page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает
+    <p class="container page-main__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не
+      хватает
       ваших?</p>
 
     <!-- Фотографии пользователей -->
@@ -72,11 +72,17 @@
       <h2 class="visually-hidden">Фотографии пользователей</h2>
 
       <article class="photo photo--panorama photos__panorama">
-        <picture class="photo__picture">
-          <source media="(min-width: 960px)" srcset="img/">
-          <source media="(min-width: 660px)" srcset="img/">
-          <img class="photo__image" src="img/" alt="Панорама дня от Анны">
-        </picture>
+        <div class="photo__wrapper">
+          <picture class="photo__picture">
+            <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/panorama-desktop@1x.webp 1x, img/webp/panorama-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/panorama-tablet@1x.webp 1x, img/webp/panorama-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/webp/panorama-mobile@1x.webp 1x, img/webp/panorama-mobile@2x.webp 2x">
+
+            <source media="(min-width: 960px)" srcset="img/panorama-desktop@2x.jpg 2x, img/panorama-desktop@1x.jpg 1x">
+            <source media="(min-width: 660px)" srcset="img/panorama-tablet@2x.jpg 2x, img/panorama-tablet@1x.jpg 1x">
+            <img class="photo__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x, img/panorama-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+          </picture>
+        </div>
 
         <div class="photo__box">
           <p class="photo__author">Анна <span class="photo__time">(5 минут назад)</span></p>
@@ -86,164 +92,191 @@
         </div>
       </article>
 
-      <ul class="photos__list">
-        <li class="photos__item">
-          <article class="photo">
-            <picture class="photo__picture">
-              <source media="(min-width: 960px)" srcset="img/">
-              <source media="(min-width: 660px)" srcset="img/">
-              <img class="photo__image" src="img/" alt="Фото Левона">
-            </picture>
+      <div class="container">
 
-            <div class="photo__box">
-              <p class="photo__author">Левон <span class="photo__time">(5 часов назад)</span></p>
-              <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <p class="photo__likes">Нравится: <span class="photo__likes-counter">356</span></p>
-            </div>
-          </article>
-        </li>
+        <ul class="photos__list">
+          <li class="photos__item">
+            <article class="photo">
+              <picture class="photo__picture">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-car-desktop@1x.webp 1x, img/webp/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-car-tablet@1x.webp 1x, img/webp/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-car-mobile@1x.webp 1x, img/webp/photo-car-mobile@2x.webp 2x">
 
-        <li class="photos__item">
-          <article class="photo">
-            <picture class="photo__picture">
-              <source media="(min-width: 960px)" srcset="img/">
-              <source media="(min-width: 660px)" srcset="img/">
-              <img class="photo__image" src="img/" alt="Фото Антона">
-            </picture>
+                <source media="(min-width: 960px)" srcset="img/photo-car-desktop@2x.jpg 2x, img/photo-car-desktop@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@2x.jpg 2x, img/photo-car-tablet@1x.jpg 1x">
+                <img class="photo__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x, img/photo-car-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+              </picture>
 
-            <div class="photo__box">
-              <p class="photo__author">Антон <span class="photo__time">(12 часов назад)</span></p>
-              <p class="photo__description">Соседи будут рады!</p>
-              <p class="photo__likes">Нравится: <span class="photo__likes-counter">666</span></p>
-            </div>
-          </article>
-        </li>
+              <div class="photo__box">
+                <p class="photo__author">Левон <span class="photo__time">(5 часов назад)</span></p>
+                <p class="photo__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <p class="photo__likes">Нравится: <span class="photo__likes-counter">356</span></p>
+              </div>
+            </article>
+          </li>
 
-        <li class="photos__item">
-          <article class="photo">
-            <picture class="photo__picture">
-              <source media="(min-width: 960px)" srcset="img/">
-              <source media="(min-width: 660px)" srcset="img/">
-              <img class="photo__image" src="img/" alt="Фото Бориса">
-            </picture>
+          <li class="photos__item">
+            <article class="photo">
+              <picture class="photo__picture">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-drumset-desktop@1x.webp 1x, img/webp/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-drumset-tablet@1x.webp 1x, img/webp/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-drumset-mobile@1x.webp 1x, img/webp/photo-drumset-mobile@2x.webp 2x">
 
-            <div class="photo__box">
-              <p class="photo__author">Борис <span class="photo__time">(20 часов назад)</span></p>
-              <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <p class="photo__likes">Нравится: <span class="photo__likes-counter">215</span></p>
-            </div>
-          </article>
-        </li>
+                <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@2x.jpg 2x, img/photo-drumset-desktop@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@2x.jpg 2x, img/photo-drumset-tablet@1x.jpg 1x">
+                <img class="photo__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x, img/photo-drumset-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+              </picture>
 
-        <li class="photos__item">
-          <article class="photo">
-            <picture class="photo__picture">
-              <source media="(min-width: 960px)" srcset="img/">
-              <source media="(min-width: 660px)" srcset="img/">
-              <img class="photo__image" src="img/" alt="Фото Сергея">
-            </picture>
+              <div class="photo__box">
+                <p class="photo__author">Антон <span class="photo__time">(12 часов назад)</span></p>
+                <p class="photo__description">Соседи будут рады!</p>
+                <p class="photo__likes">Нравится: <span class="photo__likes-counter">666</span></p>
+              </div>
+            </article>
+          </li>
 
-            <div class="photo__box">
-              <p class="photo__author">Сергей <span class="photo__time">(25 часов назад)</span></p>
-              <p class="photo__description">Самая кубанская в мире!</p>
-              <p class="photo__likes">Нравится: <span class="photo__likes-counter">4</span></p>
-            </div>
-          </article>
-        </li>
+          <li class="photos__item">
+            <article class="photo">
+              <picture class="photo__picture">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-window-desktop@1x.webp 1x, img/webp/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-window-tablet@1x.webp 1x, img/webp/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-window-mobile@1x.webp 1x, img/webp/photo-window-mobile@2x.webp 2x">
 
-        <li class="photos__item">
-          <article class="photo">
-            <picture class="photo__picture">
-              <source media="(min-width: 960px)" srcset="img/">
-              <source media="(min-width: 660px)" srcset="img/">
-              <img class="photo__image" src="img/" alt="Фото Максима">
-            </picture>
+                <source media="(min-width: 960px)" srcset="img/photo-window-desktop@2x.jpg 2x, img/photo-window-desktop@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@2x.jpg 2x, img/photo-window-tablet@1x.jpg 1x">
+                <img class="photo__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x, img/photo-window-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+              </picture>
 
-            <div class="photo__box">
-              <p class="photo__author">Максим <span class="photo__time">(40 часов назад)</span></p>
-              <p class="photo__description">Где снег-то?</p>
-              <p class="photo__likes">Нравится: <span class="photo__likes-counter">150</span></p>
-            </div>
-          </article>
-        </li>
+              <div class="photo__box">
+                <p class="photo__author">Борис <span class="photo__time">(20 часов назад)</span></p>
+                <p class="photo__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <p class="photo__likes">Нравится: <span class="photo__likes-counter">215</span></p>
+              </div>
+            </article>
+          </li>
 
-        <li class="photos__item">
-          <article class="photo">
-            <picture class="photo__picture">
-              <source media="(min-width: 960px)" srcset="img/">
-              <source media="(min-width: 660px)" srcset="img/">
-              <img class="photo__image" src="img/" alt="Фото Надежды">
-            </picture>
+          <li class="photos__item">
+            <article class="photo">
+              <picture class="photo__picture">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-fair-desktop@1x.webp 1x, img/webp/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-fair-tablet@1x.webp 1x, img/webp/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-fair-mobile@1x.webp 1x, img/webp/photo-fair-mobile@2x.webp 2x">
 
-            <div class="photo__box">
-              <p class="photo__author">Надежда <span class="photo__time">(45 часов назад)</span></p>
-              <p class="photo__description">Всем GM и взаимные лайки!</p>
-              <p class="photo__likes">Нравится: <span class="photo__likes-counter">2560</span></p>
-            </div>
-          </article>
-        </li>
-      </ul>
+                <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@2x.jpg 2x, img/photo-fair-desktop@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@2x.jpg 2x, img/photo-fair-tablet@1x.jpg 1x">
+                <img class="photo__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x, img/photo-fair-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+              </picture>
+
+              <div class="photo__box">
+                <p class="photo__author">Сергей <span class="photo__time">(25 часов назад)</span></p>
+                <p class="photo__description">Самая кубанская в мире!</p>
+                <p class="photo__likes">Нравится: <span class="photo__likes-counter">4</span></p>
+              </div>
+            </article>
+          </li>
+
+          <li class="photos__item">
+            <article class="photo">
+              <picture class="photo__picture">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-pov-desktop@1x.webp 1x, img/webp/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-pov-tablet@1x.webp 1x, img/webp/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-pov-mobile@1x.webp 1x, img/webp/photo-pov-mobile@2x.webp 2x">
+
+                <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@2x.jpg 2x, img/photo-pov-desktop@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@2x.jpg 2x, img/photo-pov-tablet@1x.jpg 1x">
+                <img class="photo__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x, img/photo-pov-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+              </picture>
+
+              <div class="photo__box">
+                <p class="photo__author">Максим <span class="photo__time">(40 часов назад)</span></p>
+                <p class="photo__description">Где снег-то?</p>
+                <p class="photo__likes">Нравится: <span class="photo__likes-counter">150</span></p>
+              </div>
+            </article>
+          </li>
+
+          <li class="photos__item">
+            <article class="photo">
+              <picture class="photo__picture">
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/webp/photo-wing-desktop@1x.webp 1x, img/webp/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/webp/photo-wing-tablet@1x.webp 1x, img/webp/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/webp/photo-wing-mobile@1x.webp 1x, img/webp/photo-wing-mobile@2x.webp 2x">
+
+                <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@2x.jpg 2x, img/photo-wing-desktop@1x.jpg 1x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@2x.jpg 2x, img/photo-wing-tablet@1x.jpg 1x">
+                <img class="photo__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x, img/photo-wing-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+              </picture>
+
+              <div class="photo__box">
+                <p class="photo__author">Надежда <span class="photo__time">(45 часов назад)</span></p>
+                <p class="photo__description">Всем GM и взаимные лайки!</p>
+                <p class="photo__likes">Нравится: <span class="photo__likes-counter">2560</span></p>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Редактор фотографий -->
 
-    <section class="editor">
-      <h2 class="editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
-      <div class="editor__wrapper">
-        <picture class="editor__picture">
-          <img class="editor__image" src="img/" width="300" height="400" alt="Ваше фото">
-        </picture>
+    <div class="container">
+      <section class="editor">
+        <h2 class="editor__title">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</h2>
+        <div class="editor__wrapper">
+          <picture class="editor__picture">
+            <img class="editor__image" src="img/photo-road-tablet@1x.jpg" srcset="img/photo-road-tablet@2x.jpg 2x, img/photo-road-tablet@1x.jpg 1x" width="300" height="400" alt="Ваше фото">
+          </picture>
 
-        <div class="editor__effects">
+          <div class="editor__effects">
 
-          <div class="effect effect--active editor__effect">
-            <span class="visually-hidden">Кадрирование</span>
-            <div class="effect__image">
-              <svg class="effect__icon" width="44" height="44">
-                <use href="#icon-crop"></use>
-              </svg>
+            <div class="effect effect--active editor__effect">
+              <span class="visually-hidden">Кадрирование</span>
+              <div class="effect__image">
+                <svg class="effect__icon" width="44" height="44">
+                  <use href="#icon-crop"></use>
+                </svg>
+              </div>
+              <div class="effect__control"></div>
             </div>
-            <div class="effect__control"></div>
+
+            <div class="effect editor__effect">
+              <span class="visually-hidden">Заливка</span>
+              <div class="effect__image">
+                <svg class="effect__icon" width="48" height="43">
+                  <use href="#icon-fill"></use>
+                </svg>
+              </div>
+              <div class="effect__control"></div>
+            </div>
+
+            <div class="effect editor__effect">
+              <span class="visually-hidden">Контраст</span>
+              <div class="effect__image">
+                <svg class="effect__icon" width="32" height="32">
+                  <use href="#icon-contrast"></use>
+                </svg>
+              </div>
+              <div class="effect__control"></div>
+            </div>
           </div>
 
-          <div class="effect editor__effect">
-            <span class="visually-hidden">Заливка</span>
-            <div class="effect__image">
-              <svg class="effect__icon" width="48" height="43">
-                <use href="#icon-fill"></use>
-              </svg>
-            </div>
-            <div class="effect__control"></div>
-          </div>
-
-          <div class="effect editor__effect">
-            <span class="visually-hidden">Контраст</span>
-            <div class="effect__image">
-              <svg class="effect__icon" width="32" height="32">
-                <use href="#icon-contrast"></use>
-              </svg>
-            </div>
-            <div class="effect__control"></div>
+          <div class="editor__box">
+            <a class="button editor__button editor__button--post" href="#">Запостить</a>
+            <a class="button editor__button editor__button--cancel" href="#">Отмена</a>
           </div>
         </div>
-
-        <div class="editor__box">
-          <a class="button editor__button editor__button--post" href="#">Запостить</a>
-          <a class="button editor__button editor__button--cancel" href="#">Отмена</a>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
   </main>
 
   <!-- Подвал -->
 
-  <footer class="page-footer">
-    <a class="logo logo--footer page-footer__logo">
+  <footer class="container page-footer">
+    <a class="logo logo--footer page-footer__logo" href="index.html">
       <span class="visually-hidden">Pink</span>
-      <svg class="logo__icon" width="147" height="40">
-        <use xlink:href="#icon-logo-footer"></use>
-      </svg>
+      <include src="build/img/logo-main.svg"></include>
     </a>
 
     <ul class="page-footer__list">
@@ -269,7 +302,7 @@
         <a class="social" href="#" target="_blank" title="Наш YouTube">
           <span class="visually-hidden">Наш YouTube</span>
           <svg class="social__icon" width="15" height="13">
-            <use href="#icon-youtube"></use>
+            <use xlink:href="#icon-youtube"></use>
           </svg>
         </a>
       </li>
@@ -281,7 +314,7 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" title="HTML Academy">
           <span class="visually-hidden">HTML Academy</span>
           <svg class="copyright__icon" width="27" height="34">
-            <use href="#icon-academy"></use>
+            <use xlink:href="#icon-academy"></use>
           </svg>
         </a>
       </p>

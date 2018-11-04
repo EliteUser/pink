@@ -2,9 +2,61 @@
   width: 75px;
   height: 23px;
 
+  .logo--mobile {
+    fill: $text-light;
+  }
+
+  &[href]:hover {
+    cursor: pointer;
+
+    .logo--mobile {
+      fill: $page-pink;
+    }
+  }
+
+  &[href]:active {
+    .logo--mobile {
+      fill: rgba($text-light, 0.3);
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     width: 147px;
     height: 40px;
+
+    &[href]:hover {
+      cursor: pointer;
+
+      .logo--large {
+        fill: $page-pink;
+      }
+    }
+
+    &[href]:active {
+      .logo--large {
+        fill: rgba($text-light, 0.3);
+      }
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    .logo__sparks {
+      fill: $page-pink;
+    }
+
+    &[href]:hover {
+      cursor: pointer;
+
+      .logo__sparks {
+        fill: $text-light;
+      }
+    }
+
+    &[href]:active {
+      .logo__sparks {
+        fill: rgba($text-light, 0.3);
+      }
+    }
   }
 }
 
@@ -13,8 +65,63 @@
 }
 
 .logo--footer {
-  @media (min-width: $screen-tablet) {
-    width: 147px;
-    height: 40px;
+  width: 147px;
+  height: 40px;
+
+  .logo--mobile {
+    display: none;
+  }
+
+  .logo--large {
+    display: inline-block;
+    fill: $page-blue;
+  }
+
+  .logo__glass--tablet {
+    fill: $page-pink;
+  }
+
+  &[href]:hover {
+    cursor: pointer;
+
+    .logo--large {
+      fill: $page-pink;
+    }
+  }
+
+  &[href]:active {
+    .logo--large {
+      fill: rgba($page-blue, 0.3);
+    }
+
+    .logo__glass--tablet {
+      fill: rgba($page-pink, 0.3);
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    .logo__sparks {
+      fill: $page-blue;
+    }
+
+    .logo__glass--desktop {
+      fill: $page-pink;
+    }
+
+    &[href]:hover {
+      .logo__sparks {
+        fill: $page-pink;
+      }
+    }
+
+    &[href]:active {
+      .logo__sparks {
+        fill: rgba($page-blue, 0.3);
+      }
+
+      .logo__glass--desktop {
+        fill: rgba($page-pink, 0.3);
+      }
+    }
   }
 }

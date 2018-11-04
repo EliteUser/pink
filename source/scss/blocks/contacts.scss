@@ -30,6 +30,8 @@
   margin-bottom: 9px;
 
   @media (min-width: $screen-tablet) {
+    position: relative;
+    z-index: 6;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -118,9 +120,9 @@
 
   &::before {
     position: absolute;
-    top: 0;
+    top: -10px;
     left: 0;
-    z-index: 2;
+    z-index: 4;
     content: "";
     width: 100%;
     height: 77px;
@@ -132,25 +134,82 @@
 
   @media (min-width: $screen-tablet) {
     height: 373px;
+
+    &::before {
+      top: -57px;
+      height: 130px;
+      background-size: 1200px;
+    }
   }
 
   @media (min-width: $screen-desktop) {
+    width: 100%;
     height: 503px;
+
+    &::before {
+      height: 190px;
+      background-size: 1760px;
+    }
   }
 }
 
 .contacts__map {
+  position: relative;
+  z-index: 2;
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: $screen-mobile;
   height: 227px;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    top: 121px;
+    left: 142px;
+    z-index: 3;
+    content: "";
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/map-marker-icon.svg");
+    background-repeat: no-repeat;
+  }
 
   @media (min-width: $screen-tablet) {
+    width: $screen-tablet;
     height: 373px;
+
+    &::before {
+      top: 191px;
+      left: 312px;
+    }
   }
 
   @media (min-width: $screen-desktop) {
+    min-width: $bg-width;
     height: 503px;
+
+    &::before {
+      top: 263px;
+      left: 584px;
+    }
+  }
+}
+
+.contacts__image {
+  position: relative;
+  top: -418px;
+  display: block;
+  margin: 0 auto;
+  width: $screen-mobile;
+
+  @media (min-width: $screen-tablet) {
+    top: -320px;
+    width: $screen-tablet;
+  }
+
+  @media (min-width: $screen-desktop) {
+    top: -280px;
+    width: $bg-width;
   }
 }
 
@@ -161,7 +220,6 @@
   width: 100%;
   min-width: 320px;
   height: 227px;
-  background-color: $gray-bg;
 
   @media (min-width: $screen-tablet) {
     height: 373px;

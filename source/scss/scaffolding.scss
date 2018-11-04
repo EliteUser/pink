@@ -11,7 +11,7 @@ html {
 body {
   margin: 0 auto;
   min-width: $screen-mobile;
-  max-width: $screen-desktop;
+  max-width: $bg-width;
   padding: 0;
   font-family: "Open Sans", "Roboto", "Arial", sans-serif;
 }
@@ -40,7 +40,7 @@ a {
 .container {
   margin: 0 auto;
   min-width: $screen-mobile;
-  max-width: $screen-mobile;
+  max-width: $screen-desktop;
 }
 
 .nojs {
@@ -49,7 +49,7 @@ a {
   }
 
   .slider__list {
-    //overflow-x: scroll;
+    overflow-x: scroll;
   }
 
   .slider__controls {

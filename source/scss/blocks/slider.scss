@@ -92,14 +92,27 @@
 .slider__toggle {
   width: 22px;
   height: 41px;
-  background-color: $gray-bg;
+  background-color: transparent;
+  background-size: 22px 42px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   border: none;
+  opacity: 0.3;
 
   &:hover {
-
+    cursor: pointer;
+    opacity: 0.6;
   }
 
   &:active {
-
+    opacity: 0.1;
   }
+}
+
+.slider__toggle--next {
+  background-image: url("../img/review-arrow-right-icon.svg");
+}
+
+.slider__toggle--prev {
+  background-image: url("../img/review-arrow-left-icon.svg");
 }

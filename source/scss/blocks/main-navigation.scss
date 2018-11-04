@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $black-opacity;
   }
 }
 
@@ -13,7 +12,6 @@
   align-items: center;
   height: 66px;
   padding: 0 20px;
-  background-color: $black-opacity;
 
   @media (min-width: $screen-tablet) {
     height: 109px;
@@ -29,6 +27,12 @@
 .main-navigation__box--active {
   background-color: $page-blue;
   box-shadow: inset 0 -1px 0 0 $text-dark;
+}
+
+.main-navigation__logo {
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 15px;
+  }
 }
 
 .main-navigation__toggle {
@@ -155,6 +159,10 @@
 
 .main-navigation__list--show {
   display: block;
+
+  .main-navigation__link {
+    background-color: $page-blue;
+  }
 }
 
 .main-navigation__item {
