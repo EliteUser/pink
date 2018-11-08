@@ -153,6 +153,17 @@
   }
 }
 
+.contacts__wrapper--js {
+  .contacts__map {
+    z-index: -1;
+    display: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .contacts__map {
   position: relative;
   z-index: 2;

@@ -1,11 +1,17 @@
 .slider__list {
+  position: relative;
   display: flex;
   flex-wrap: nowrap;
 }
 
 .slider__item {
+  display: none;
   flex-shrink: 0;
   width: 100%;
+}
+
+.slider__item--active {
+  display: block;
 }
 
 .slider__controls {

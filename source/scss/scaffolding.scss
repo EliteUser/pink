@@ -52,7 +52,11 @@ a {
     overflow-x: scroll;
   }
 
+  .slider__item {
+    display: block;
+  }
+
   .slider__controls {
-    //display: none;
+    display: none;
   }
 }

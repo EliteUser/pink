@@ -120,8 +120,8 @@
 .textfield__input {
   padding: 15px 20px;
   width: 100%;
+  height: 64px;
   font-size: 18px;
-  line-height: 30px;
   color: $page-blue;
   border: 2px solid $border;
   border-radius: 1px;
@@ -140,4 +140,8 @@
     outline: none;
     border-color: $page-pink;
   }
+}
+
+.textfield__input--invalid {
+  border-color: $page-pink;
 }

@@ -140,7 +140,7 @@
       <section class="reviews">
         <h2 class="visually-hidden">Отзывы о приложении</h2>
 
-        <div class="slider">
+        <div class="slider" id="reviews-slider">
           <ul class="reviews__list slider__list">
             <li class="reviews__item slider__item slider__item--active">
               <article class="review">
@@ -202,7 +202,7 @@
     <section class="subscribe">
       <h2 class="visually-hidden">Планы подписки</h2>
 
-      <div class="slider subscribe__slider">
+      <div class="slider subscribe__slider" id="subscribe-slider">
 
         <ul class="subscribe__list slider__list">
           <li class="subscribe__item subscribe__item--headings">
@@ -231,7 +231,7 @@
             </ul>
           </li>
 
-          <li class="subscribe__item slider__item">
+          <li class="subscribe__item slider__item slider__item--active">
             <div class="subscribe__plan subscribe__plan--hit">
               <h3 class="subscribe__name">Стандарт</h3>
               <b class="subscribe__price">3,99 USD</b>
@@ -269,10 +269,10 @@
         </ul>
 
         <div class="slider__controls">
-          <button class="slider__control slider__control--active" type="button">
+          <button class="slider__control" type="button">
             <span class="visually-hidden">План 1</span>
           </button>
-          <button class="slider__control" type="button">
+          <button class="slider__control slider__control--active" type="button">
             <span class="visually-hidden">План 2</span>
           </button>
           <button class="slider__control" type="button">

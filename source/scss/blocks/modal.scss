@@ -1,3 +1,20 @@
+.modal {
+  position: fixed;
+  top: 50vh;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.modal--show {
+  display: flex;
+}
+
 .modal--success {
   .modal__box {
     padding-bottom: 0;
@@ -10,6 +27,7 @@
   color: $page-blue;
   padding: 47px 0 52px;
   text-align: center;
+  background-color: $text-light;
   box-shadow: 0 7px 15px rgba($text-dark, 0.15);
 
   @media (min-width: $screen-tablet) {

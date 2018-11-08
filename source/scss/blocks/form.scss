@@ -61,62 +61,84 @@
   }
 
   @media (min-width: $screen-tablet) {
-    margin: 15px 20px 36px;
+    margin: 23px 20px 41px;
     border: 2px solid $border;
 
     &:nth-of-type(1) {
       order: -4;
     }
 
-    &:nth-of-type(2) {
-      margin-top: 20px;
-      margin-bottom: 65px;
-      padding: 43px 58px 49px;
-    }
-
     &:nth-of-type(2n) {
       background-color: transparent;
 
       .form__legend {
-        position: static;
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
         width: auto;
         padding: 0 25px;
+        line-height: 30px;
+        background-color: $text-light;
+      }
+    }
+
+    &:nth-of-type(2) {
+      margin-top: 20px;
+      margin-bottom: 65px;
+      padding: 54px 58px 49px;
+
+      .form__legend {
+        width: 436px;
       }
     }
 
     &:nth-of-type(3) {
+      position: relative;
       order: -2;
-      padding: 31px 58px 26px;
+      padding: 45px 58px 27px;
 
       .form__legend {
+        position: absolute;
+        top: -16px;
+        left: 50%;
+        transform: translateX(-50%);
         display: block;
+        width: auto;
         margin: 0;
         padding: 0 25px;
+        line-height: 30px;
+        background-color: $text-light;
       }
     }
 
     &:nth-of-type(4) {
       order: -3;
-      padding: 43px 60px 54px;
+      padding: 52px 60px 54px;
+
+      .form__legend {
+        width: 368px;
+      }
     }
   }
 
   @media (min-width: $screen-desktop) {
-    margin: 15px 10px 36px;
+    margin: 15px 10px 46px;
     flex-basis: 100%;
 
     &:nth-of-type(1) {
-      flex-basis: 50%;
-      padding: 43px 35px 35px 8px;
+      min-width: 0;
+      max-width: 50%;
+      padding: 43px 35px 48px 8px;
     }
 
     &:nth-of-type(2) {
       padding-right: 0;
-      padding-bottom: 14px;
+      padding-bottom: 10px;
     }
 
     &:nth-of-type(3) {
-      padding: 28px 58px 13px;
+      padding: 42px 58px 13px;
 
       .form__textfield {
         margin-bottom: 0;
@@ -129,9 +151,10 @@
     }
 
     &:nth-of-type(4) {
-      margin: 30px 10px 37px 36px;
-      padding: 44px 20px 53px 75px;
-      flex-basis: 434px;
+      margin: 38px 10px 48px 36px;
+      padding: 52px 20px 53px 75px;
+      min-width: 0;
+      max-width: 434px;
 
       .form__legend {
         padding: 0 5px;

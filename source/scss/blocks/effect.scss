@@ -47,6 +47,11 @@
 
   @media (min-width: $screen-tablet) {
     fill: $page-pink;
+
+    &:hover {
+      cursor: auto;
+      fill: $page-pink;
+    }
   }
 }
 
@@ -80,10 +85,6 @@
     background-color: $gray-bg;
     border: 2px solid $page-pink;
     border-radius: 50%;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 
   @media (min-width: $screen-tablet) {

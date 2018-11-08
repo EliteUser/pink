@@ -24,8 +24,10 @@
 }
 
 .subscribe__slider {
+
   @media (min-width: $screen-tablet) {
     .subscribe__item {
+      display: block;
       width: 155px;
     }
 

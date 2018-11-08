@@ -27,6 +27,11 @@
 .main-navigation__box--active {
   background-color: $page-blue;
   box-shadow: inset 0 -1px 0 0 $text-dark;
+
+  @media (min-width: $screen-desktop) {
+    background-color: transparent;
+    box-shadow: none;
+  }
 }
 
 .main-navigation__logo {
@@ -40,9 +45,6 @@
   top: 50%;
   right: 20px;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   width: 50px;
   height: 50px;
@@ -116,7 +118,8 @@
 }
 
 .main-navigation__toggle--active {
-  right: 6px;
+  width: 30px;
+  right: 16px;
 
   .main-navigation__toggle-icon {
     width: 30px;
@@ -154,6 +157,7 @@
 
   @media (min-width: $screen-desktop) {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -162,6 +166,14 @@
 
   .main-navigation__link {
     background-color: $page-blue;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+
+    .main-navigation__link {
+      background-color: transparent;
+    }
   }
 }
 
