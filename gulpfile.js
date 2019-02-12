@@ -23,6 +23,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const argv = require("yargs").argv;
 
 const isProduction = ( argv.production !== undefined );
+const ghpages = require("gh-pages");
 
 /* Директории: исходники и сборка */
 
@@ -140,7 +141,7 @@ gulp.task("html", function () {
     .pipe(htmlmin({
       collapseWhitespace: true
     }))
-    .pipe(gulp.dest(config.build))
+    .pipe(gulp.dest(config.build));
 });
 
 /* Удаление папки с билдом */
@@ -172,3 +173,7 @@ gulp.task("build", gulp.series(
   "js",
   )
 );
+
+gulp.task("gh-pages", function () {
+  return ghpages.publish(config.build, function(err) {});
+});
